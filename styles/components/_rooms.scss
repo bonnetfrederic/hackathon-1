@@ -1,51 +1,111 @@
 #roomsSection {
+  // background: rgb(29, 29, 29);
   #roomsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     .roomCard {
-      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.616);
+      border: 1px solid rgba(245, 245, 245, 0.678);
+      margin: 30px 10px;
+      box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.616);
       color: whitesmoke;
-      width: 250px;
-      min-height: 600px;
-      background: rgb(22, 22, 22);
+      min-width: 200px;
+      max-width: 300px;
+      height: 600px;
       border-radius: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      background: url("../../assets/img/chateau-ambulant.jpg") center/cover;
       position: relative;
+      transition: 0.3s ease-out;
+      &:hover {
+        transform: scale(1.04);
+        border: 2px solid rgba(245, 245, 245, 0.781);
+      }
       h5 {
+        color: #f7b32b;
         position: absolute;
-        top: 20px;
+        top: 30px;
         right: 20px;
         font-size: 1.3rem;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.486);
+        transform: rotate(30deg);
       }
       h3 {
-        font-size: 2.5rem;
+        padding: 0 5px;
+        font-size: 2.2rem;
         text-align: center;
         font-weight: 600;
-
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.651);
       }
       .roomSynopsis {
-        padding: 10px;
+        padding: 50px 10px 0;
       }
       p {
+        width: 92%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         .roomResaButton {
           background: #f7b32b;
-          box-shadow: 1px 1px 1px rgba(22, 22, 22, 0.616);
-          width: 120px;
+          box-shadow: 3px 3px 5px rgba(158, 158, 158, 0.651);
+          width: 60%;
           height: 30px;
-          border-radius: 20px;
+          border-radius: 10px;
           text-align: center;
           padding: 2px;
           font-size: 1.4rem;
+          &:hover {
+            color: black;
+            cursor: pointer;
+          }
         }
         .roomSeeDetails {
-          padding: 5px;
+          width: 40%;
           font-weight: 300;
+          font-size: 0.8rem;
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            border: none;
+            bottom: 3px;
+            width: 64%;
+            right: 0;
+          }
+          &:hover {
+            // font-weight: 600;
+            transform: scale(1.1);
+            cursor: pointer;
+            &::after {
+              border: 1px solid whitesmoke;
+            }
+          }
         }
       }
+    }
+    #roomCard1{
+      background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.233) 25%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/chateau-ambulant.jpg") center/cover;
+    }
+    #roomCard2{
+      background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.233) 25%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/chucky.png") center/cover;
+    }
+    #roomCard3{
+      background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.233) 25%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/souterrainsjpg.jpg") right/cover;
+    }
+    #roomCard4{
+      background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.233) 25%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/star-wars-death-star-2.jpg") center/cover;
     }
   }
 }
