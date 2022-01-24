@@ -1,10 +1,10 @@
 {
     "version": 3,
-    "mappings": "ACIA,UAAU;EACR,WAAW,EAAE,QAAQ;EACrB,GAAG,EAAE,2CAAmD;;;AAK1D,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACvB",
+    "mappings": "AEIA,UAAU;EACR,WAAW,EAAE,QAAQ;EACrB,GAAG,EAAE,2CAAmD;;;AAK1D,AAAA,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACvB",
     "sources": [
         "style.scss",
-        "components/_settings.scss",
         "components/_rootpathLocal.scss",
+        "components/_settings.scss",
         "pages/_contact.scss"
     ],
     "names": [],
