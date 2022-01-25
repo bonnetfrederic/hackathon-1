@@ -1,1 +1,4 @@
-_rootpathLocal.scss
+node_modules/
+package.json
+package-lock.json
+npm

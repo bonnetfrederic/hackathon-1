@@ -1,0 +1,41 @@
+body {
+  background-color: blanchedalmond;
+  background-size: cover;
+  height: 100vh;
+}
+.header {
+  width: 100%;
+  //   background-color: var(--banner-c);
+}
+
+nav {
+  padding: 1.5% 0 1.5%;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 8%;
+      height: 8%;
+      margin: 2%;
+      margin-right: 40%;
+    }
+
+    li {
+      padding: 2.3rem;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    a {
+      letter-spacing: 2px;
+      transition: all ease 0.5s;
+      color: #18223b;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+  }
+}
