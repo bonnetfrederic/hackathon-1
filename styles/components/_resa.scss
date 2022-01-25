@@ -1,0 +1,136 @@
+#resaSection {
+  background: $color-primary;
+  color: $color-light;
+  #resaContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    h2 {
+      text-transform: uppercase;
+      height: 100px;
+      padding-top: 60px;
+    }
+    #resaInputs {
+      height: 330px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      label {
+        color: $color-secondary;
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+      select,
+      input {
+        font-size: 1.1rem;
+        background: $color-light;
+        color: $color-dark;
+        width: 250px;
+        height: 50px;
+        border-radius: 20px;
+        text-align: center;
+        option {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .flexColCenter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #resaAvailabilitiesAndNext {
+      position: relative;
+      #resaAvailabilities {
+        #resaAvailabilitiesTitle {
+          font-size: 1.3rem;
+          color: $color-secondary;
+          margin-bottom: 20px;
+        }
+        .resaHourContainer {
+          width: 90%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: flex-start;
+          #resaHoursContainer1,
+          #resaHoursContainer2 {
+            width: 50%;
+            margin-right: 30px;
+            .resaHourLine {
+              width: 100%;
+              margin: 20px auto;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              position: relative;
+              &:after {
+                content: "";
+                border: 1px solid rgba(245, 245, 245, 0.603);
+                position: absolute;
+                bottom: -10px;
+                width: 93%;
+              }
+              .resaHour {
+                width: 65%;
+                text-align: left;
+                font-size: 1.3rem;
+              }
+              .resaAvailable {
+                width: 25%;
+                text-align: center;
+                text-transform: uppercase;
+                background: $color-secondary;
+                color: $color-dark;
+                border-radius: 5px;
+                cursor: pointer;
+                box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
+                transition: 0.3s ease;
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+              .resaUnavailable {
+                width: 25%;
+                text-align: center;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+        #resaPreviousNextButtons {
+          margin: 40px 0;
+          padding-left: 70px;
+          button {
+            text-transform: uppercase;
+            font-size: .7rem;
+            background: $color-light;
+            color: $color-dark;
+            text-align: center;
+            border-radius: 10px;
+            width: 120px;
+            height: 30px;
+            margin: 0 2px;
+            cursor: pointer;
+          }
+        }
+      }
+      #resaNextButton {
+        position: absolute;
+        bottom: 20px;
+        right: 0px;
+        height: 40px;
+        width: 150px;
+        background: $color-secondary;
+        color: $color-dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 15px;
+      }
+    }
+  }
+}
