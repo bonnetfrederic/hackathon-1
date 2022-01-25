@@ -32,26 +32,31 @@
       <h1> Plonger dans vos univers préférés!</h1>
       <div class="presentation">
         <div class="card">
-        <div class="circle"></div>
+          <div class="circle"></div>
           <h2>lorem ipsum</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore nemo obcaecati minus id autem commodi eum quis, ut itaque!</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore nemo obcaecati minus id autem
+            commodi eum quis, ut itaque!</p>
         </div>
         <div class="card">
           <div class="circle"></div>
           <h2>lorem ipsum</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos magnam placeat consectetur deleniti accusamus minus quia?</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos
+            magnam placeat consectetur deleniti accusamus minus quia?</p>
         </div>
         <div class="card">
           <div class="circle"></div>
           <h2>lorem ipsum</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos magnam placeat consectetur deleniti accusamus minus quia?</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos
+            magnam placeat consectetur deleniti accusamus minus quia?</p>
         </div>
       </div>
     </section>
 
-    
+
     <section id="roomsSection">
       <div id="roomsContainer">
+
+        <h2>Nos salles</h2>
 
         <div id="roomCard4" class="roomCard">
           <img id="roomPicture">
@@ -115,11 +120,105 @@
             <!-- <span class="roomSeeDetails">En savoir plus</span> -->
           </p>
         </div>
-        
+
       </div>
-      
+
     </section>
-    
+
+
+    <section id="resaSection">
+      <div id="resaContainer">
+        <h2 id="resaTitle">Réservation</h2>
+        <div id="resaInputs">
+          <div class="flexColCenter" id="resaInputsRoom">
+            <label for="room-select">Quelle salle ?</label>
+            <select class="roundedInput" id="room-select">
+              <!-- <option value="">-- Choisir une salle --</option> -->
+              <option value="star-wars">Les rebelles de l'étoile</option>
+              <option value="castle">Le château ambulant</option>
+              <option value="chucky">Chucky</option>
+              <option value="underground">Les souterrains de Bordeaux</option>
+            </select>
+          </div>
+          <div class="flexColCenter" id="resaInputsPlayers">
+            <label for="players-number">Combien de personnes ?</label>
+            <select class="roundedInput" id="players-number">
+              <!-- <option value="">-- Nombre de joueurs --</option> -->
+              <option value="two">2 -- 26€/pers</option>
+              <option value="two">3 -- 26€/pers</option>
+              <option value="two" selected>4 -- 26€/pers</option>
+              <option value="two">5 -- 22€/pers</option>
+              <option value="two">6 -- 22€/pers</option>
+              <option value="two">7 -- 22€/pers</option>
+              <option value="two">8 -- 22€/pers</option>
+              <option value="two">9 -- 22€/pers</option>
+              <option value="two">10 - 20€/pers</option>
+              <option value="two">11 - 20€/pers</option>
+              <option value="two">12 - 20€/pers</option>
+            </select>
+          </div>
+          <div class="flexColCenter" id="resaInputsDate">
+            <label for="game-date">Quand ?</label>
+            <input class="roundedInput" type="date" id="game-date" value="2022-01-28" min="2022-01-28" max="2022-12-31">
+          </div>
+        </div>
+        <div id="resaAvailabilitiesAndNext">
+          <div id="resaAvailabilities">
+            <div id="resaAvailabilitiesTitle">Disponibilités</div>
+            <div class="resaHourContainer">
+              <div id="resaHoursContainer1">
+                <div class="resaHourLine" id="resaHour1">
+                  <span class="resaHour">10h30</span>
+                  <span class="resaAvailable">Réserver</span>
+                </div>
+                <div class="resaHourLine" id="resaHour2">
+                  <span class="resaHour">12h00</span>
+                  <span class="resaUnavailable">Complet</span>
+                </div>
+                <div class="resaHourLine" id="resaHour3">
+                  <span class="resaHour">13h30</span>
+                  <span class="resaAvailable">Réserver</span>
+                </div>
+                <div class="resaHourLine" id="resaHour4">
+                  <span class="resaHour">15h00</span>
+                  <span class="resaAvailable">Réserver</span>
+                </div>
+                <div class="resaHourLine" id="resaHour5">
+                  <span class="resaHour">16h30</span>
+                  <span class="resaAvailable">Réserver</span>
+                </div>
+                <div class="resaHourLine" id="resaHour6">
+                  <span class="resaHour">18h00</span>
+                  <span class="resaUnavailable">Complet</span>
+                </div>
+              </div>
+              <div id="resaHoursContainer2">
+                <div class="resaHourLine" id="resaHour7">
+                  <span class="resaHour">19h30</span>
+                  <span class="resaAvailable">Réserver</span>
+                </div>
+                <div class="resaHourLine" id="resaHour8">
+                  <span class="resaHour">21h00</span>
+                  <span class="resaUnavailable">Complet</span>
+                </div>
+                <div class="resaHourLine" id="resaHour9">
+                  <span class="resaHour">22h30</span>
+                  <span class="resaAvailable">Réserver</span>
+                </div>
+
+                <div id="resaPreviousNextButtons">
+                  <button class="resaPreviousDay">&#10094; Jour précedent</button>
+                  <button class="resaNextDay">Jour suivant &#10095;</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div id="resaNextButton">SUIVANT &#10095;</div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script src="js/index.js"></script>

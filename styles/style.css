@@ -20,10 +20,12 @@ body {
   font-family: "Oswald-Regular";
   src: url("./../assets/fonts/Oswald/Oswald-Regular.ttf");
 }
+
 @font-face {
   font-family: "Oswald-Semi-bold";
   src: url("./../assets/fonts/Oswald/Oswald-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "Oswald-ExtraLight";
   src: url("./../assets/fonts/Oswald/Oswald-ExtraLight.ttf");
@@ -32,15 +34,18 @@ body {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --banner-c: #f6a11c;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
   background-color: blanchedalmond;
   background-size: cover;
   height: 100vh;
@@ -53,26 +58,36 @@ body {
 nav {
   padding: 1.5% 0 1.5%;
 }
+
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 nav ul img {
   width: 8%;
   height: 8%;
   margin: 2%;
   margin-right: 40%;
 }
+
 nav ul li {
   padding: 2.3rem;
   text-transform: uppercase;
   display: inline-block;
 }
+
 nav ul a {
   letter-spacing: 2px;
+  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   color: #18223b;
 }
+
 nav ul a:hover {
   opacity: 0.75;
 }
@@ -80,32 +95,45 @@ nav ul a:hover {
 #apropos {
   height: 100vh;
 }
+
 #apropos h1 {
   padding: 3% 0;
   text-align: center;
 }
+
 #apropos .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
   color: white;
   text-align: center;
   padding: 6% 3%;
 }
+
 #apropos .presentation .card {
   width: 100%;
   border: 1px solid #dfbf91;
   margin-left: 2%;
   padding: 5% 8%;
   border-radius: 5px;
-  box-shadow: 3px 2 px 2px #dfbf91;
+  -webkit-box-shadow: 3px 2 px 2px #dfbf91;
+          box-shadow: 3px 2 px 2px #dfbf91;
 }
+
 #apropos .presentation .card .circle {
   height: 150px;
   width: 150px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+}
+
+#roomsSection {
+  background: #18223b;
 }
 
 #roomsSection #roomsContainer {
@@ -123,7 +151,16 @@ nav ul a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px auto;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+#roomsSection #roomsContainer h2 {
+  text-transform: uppercase;
+  height: 100px;
+  padding-top: 60px;
+  color: #e4e5e4;
+  margin-bottom: 30px;
 }
 
 #roomsSection #roomsContainer .roomCard {
@@ -153,6 +190,22 @@ nav ul a:hover {
 
 #roomsSection #roomsContainer .roomCard:hover {
   height: 330px;
+}
+
+#roomsSection #roomsContainer .roomCard .roomSynopsis {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: synopsis;
+  max-height: 13rem;
+  text-align: center;
+  overflow: hidden;
+  line-height: 1.3rem;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 10;
 }
 
 #roomsSection #roomsContainer .roomCard .titleAndSynopsis {
@@ -248,14 +301,26 @@ nav ul a:hover {
   max-width: 300px;
   height: 30px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  padding: 2px;
   font-size: 1.4rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 #roomsSection #roomsContainer .roomCard p .roomResaButton:hover {
   color: black;
   cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #roomsSection #roomsContainer .roomCard p .roomSeeDetails {
@@ -295,20 +360,220 @@ nav ul a:hover {
   border: 1px solid whitesmoke;
 }
 
-#roomsSection #roomsContainer #roomCard1 {
+#roomsSection #roomCard1 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/chateau-ambulant.jpg") center/cover;
 }
 
-#roomsSection #roomsContainer #roomCard2 {
+#roomsSection #roomCard2 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/chucky.png") center/cover;
 }
 
-#roomsSection #roomsContainer #roomCard3 {
+#roomsSection #roomCard3 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/souterrainsjpg.jpg") right/cover;
 }
 
-#roomsSection #roomsContainer #roomCard4 {
+#roomsSection #roomCard4 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/star-wars-death-star-2.jpg") center/cover;
 }
 
+#resaSection {
+  background: #18223b;
+  color: #e4e5e4;
+}
+
+#resaSection #resaContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+#resaSection #resaContainer h2 {
+  text-transform: uppercase;
+  height: 100px;
+  padding-top: 60px;
+}
+
+#resaSection #resaContainer #resaInputs {
+  height: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#resaSection #resaContainer #resaInputs label {
+  color: #f6a11c;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+#resaSection #resaContainer #resaInputs select,
+#resaSection #resaContainer #resaInputs input {
+  font-size: 1.1rem;
+  background: #e4e5e4;
+  color: #1e1e1e;
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#resaSection #resaContainer #resaInputs select option,
+#resaSection #resaContainer #resaInputs input option {
+  font-size: 1.2rem;
+}
+
+#resaSection #resaContainer .flexColCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext {
+  position: relative;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaAvailabilitiesTitle {
+  font-size: 1.3rem;
+  color: #f6a11c;
+  margin-bottom: 20px;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1,
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 {
+  width: 50%;
+  margin-right: 30px;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine,
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine {
+  width: 100%;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine:after,
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine:after {
+  content: "";
+  border: 1px solid rgba(245, 245, 245, 0.603);
+  position: absolute;
+  bottom: -10px;
+  width: 93%;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaHour,
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaHour {
+  width: 65%;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaAvailable,
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaAvailable {
+  width: 25%;
+  text-align: center;
+  text-transform: uppercase;
+  background: #f6a11c;
+  color: #1e1e1e;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
+          box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaAvailable:hover,
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaAvailable:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaUnavailable,
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaUnavailable {
+  width: 25%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaPreviousNextButtons {
+  margin: 40px 0;
+  padding-left: 70px;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaPreviousNextButtons button {
+  text-transform: uppercase;
+  font-size: .7rem;
+  background: #e4e5e4;
+  color: #1e1e1e;
+  text-align: center;
+  border-radius: 10px;
+  width: 120px;
+  height: 30px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaNextButton {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  height: 40px;
+  width: 150px;
+  background: #f6a11c;
+  color: #1e1e1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 15px;
+}
 /*# sourceMappingURL=style.css.map */
