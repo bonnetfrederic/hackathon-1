@@ -192,22 +192,6 @@ nav ul a:hover {
   height: 330px;
 }
 
-#roomsSection #roomsContainer .roomCard .roomSynopsis {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: synopsis;
-  max-height: 13rem;
-  text-align: center;
-  overflow: hidden;
-  line-height: 1.3rem;
-  -webkit-box-orient: vertical;
-  display: block;
-  display: -webkit-box;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 10;
-}
-
 #roomsSection #roomsContainer .roomCard .titleAndSynopsis {
   display: -ms-grid;
   display: grid;
@@ -361,19 +345,19 @@ nav ul a:hover {
 }
 
 #roomsSection #roomCard1 {
-  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/chateau-ambulant.jpg") center/cover;
+  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chateau-ambulant.jpg") center/cover;
 }
 
 #roomsSection #roomCard2 {
-  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/chucky.png") center/cover;
+  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chucky.png") center/cover;
 }
 
 #roomsSection #roomCard3 {
-  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/souterrainsjpg.jpg") right/cover;
+  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/souterrainsjpg.jpg") right/cover;
 }
 
 #roomsSection #roomCard4 {
-  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/star-wars-death-star-2.jpg") center/cover;
+  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/star-wars-death-star-2.jpg") center/cover;
 }
 
 #resaSection {
@@ -575,5 +559,12 @@ nav ul a:hover {
           align-items: center;
   text-align: center;
   border-radius: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#resaSection #resaContainer #resaAvailabilitiesAndNext #resaNextButton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */

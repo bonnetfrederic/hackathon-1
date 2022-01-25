@@ -17,7 +17,6 @@
       margin-bottom: 30px;
     }
     .roomCard {
-      // border: 1px solid rgba(245, 245, 245, 0.678);
       margin: 15px 0;
       box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.616);
       color: whitesmoke;
@@ -31,23 +30,7 @@
       position: relative;
       transition: 0.3s ease-out;
       &:hover {
-        // transform: scale(1.04);
-        // border: 2px solid rgba(245, 245, 245, 0.781);
         height: 330px;
-      }
-      .roomSynopsis {
-        grid-area: synopsis;
-        // padding: 10px;
-        max-height: 13rem;
-        text-align: center;
-        overflow: hidden;
-        line-height: 1.3rem;
-        -webkit-box-orient: vertical;
-        display: block;
-        display: -webkit-box;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 10;
       }
       .titleAndSynopsis {
         display: grid;
@@ -146,7 +129,6 @@
             right: 0;
           }
           &:hover {
-            // font-weight: 600;
             transform: scale(1.1);
             cursor: pointer;
             &::after {
@@ -164,7 +146,7 @@
         rgba(0, 0, 0, 0.233) 40%,
         rgba(0, 0, 0, 0) 100%
       ),
-      url("../../assets/img/chateau-ambulant.jpg") center/cover;
+      url("#{$rootpath}/assets/img/chateau-ambulant.jpg") center/cover;
   }
   #roomCard2 {
     background: linear-gradient(
@@ -173,7 +155,7 @@
         rgba(0, 0, 0, 0.233) 40%,
         rgba(0, 0, 0, 0) 100%
       ),
-      url("../../assets/img/chucky.png") center/cover;
+      url("#{$rootpath}/assets/img/chucky.png") center/cover;
   }
   #roomCard3 {
     background: linear-gradient(
@@ -182,7 +164,7 @@
         rgba(0, 0, 0, 0.233) 40%,
         rgba(0, 0, 0, 0) 100%
       ),
-      url("../../assets/img/souterrainsjpg.jpg") right/cover;
+      url("#{$rootpath}/assets/img/souterrainsjpg.jpg") right/cover;
   }
   #roomCard4 {
     background: linear-gradient(
@@ -191,6 +173,6 @@
         rgba(0, 0, 0, 0.233) 40%,
         rgba(0, 0, 0, 0) 100%
       ),
-      url("../../assets/img/star-wars-death-star-2.jpg") center/cover;
+      url("#{$rootpath}/assets/img/star-wars-death-star-2.jpg") center/cover;
   }
 }
