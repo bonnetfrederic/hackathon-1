@@ -3,10 +3,20 @@ $rootpath: "./.."; // overidden by _rootpathLocal.scss locally only, because fil
 
 // font inclusion example
 @font-face {
-  font-family: "font-1";
-  src: url('#{$rootpath}/assets/fonts/Roboto-Regular.ttf');
+  font-family: "Oswald-Regular";
+  src: url("#{$rootpath}/assets/fonts/Oswald/Oswald-Regular.ttf");
 }
-$font-1: "font-1", sans-serif;
+@font-face {
+  font-family: "Oswald-Semi-bold";
+  src: url("#{$rootpath}/assets/fonts/Oswald/Oswald-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Oswald-ExtraLight";
+  src: url("#{$rootpath}/assets/fonts/Oswald/Oswald-ExtraLight.ttf");
+}
+
+$font-1: "Oswald-Regular", sans-serif;
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ General ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * {
@@ -20,3 +30,8 @@ body {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Spec ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Main colours ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:root {
+  --banner-c: #f6a11c;
+}

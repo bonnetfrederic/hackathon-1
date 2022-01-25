@@ -1,20 +1,111 @@
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Oswald-Regular";
+}
+
 @font-face {
-  font-family: "font-1";
-  src: url("./../assets/fonts/Roboto-Regular.ttf");
+  font-family: "Oswald-Regular";
+  src: url("./../assets/fonts/Oswald/Oswald-Regular.ttf");
+}
+@font-face {
+  font-family: "Oswald-Semi-bold";
+  src: url("./../assets/fonts/Oswald/Oswald-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Oswald-ExtraLight";
+  src: url("./../assets/fonts/Oswald/Oswald-ExtraLight.ttf");
 }
 
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --banner-c: #f6a11c;
 }
 
 body {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
+  background-color: blanchedalmond;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+}
+
+nav {
+  padding: 1.5% 0 1.5%;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul img {
+  width: 8%;
+  height: 8%;
+  margin: 2%;
+  margin-right: 40%;
+}
+nav ul li {
+  padding: 2.3rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+nav ul a {
+  letter-spacing: 2px;
+  transition: all ease 0.5s;
+  color: #18223b;
+}
+nav ul a:hover {
+  opacity: 0.75;
+}
+
+#apropos {
+  height: 100vh;
+}
+#apropos h1 {
+  padding: 3% 0;
+  text-align: center;
+}
+#apropos .presentation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 6% 3%;
+}
+#apropos .presentation .card {
+  width: 100%;
+  border: 1px solid #dfbf91;
+  margin-left: 2%;
+  padding: 5% 8%;
+  border-radius: 5px;
+  box-shadow: 3px 2 px 2px #dfbf91;
+}
+#apropos .presentation .card .circle {
+  height: 150px;
+  width: 150px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 #roomsSection #roomsContainer {
@@ -219,4 +310,5 @@ body {
 #roomsSection #roomsContainer #roomCard4 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("../../assets/img/star-wars-death-star-2.jpg") center/cover;
 }
+
 /*# sourceMappingURL=style.css.map */
