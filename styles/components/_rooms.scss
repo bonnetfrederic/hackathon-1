@@ -62,6 +62,7 @@
           overflow: hidden !important;
           text-overflow: ellipsis;
           -webkit-line-clamp: 4;
+
           @media screen and (max-width: 800px) {
             max-height: 3.9rem;
             text-align: center;
@@ -176,3 +177,10 @@
       url("#{$rootpath}/assets/img/star-wars-death-star-2.jpg") center/cover;
   }
 }
+
+// .roomCard:hover .roomSynopsis {
+//   max-height: 15rem;
+//   line-height: 1.3rem;
+//   text-overflow: ellipsis;
+//   -webkit-line-clamp: 12;
+// }
