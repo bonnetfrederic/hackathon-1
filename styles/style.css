@@ -24,22 +24,29 @@ body {
   font-family: "Oswald-Regular";
   src: url("./../assets/fonts/Oswald/Oswald-Regular.ttf");
 }
+
 @font-face {
   font-family: "Oswald-Semi-bold";
   src: url("./../assets/fonts/Oswald/Oswald-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "Oswald-ExtraLight";
   src: url("./../assets/fonts/Oswald/Oswald-ExtraLight.ttf");
 }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -55,23 +62,32 @@ body {
 nav {
   padding: 1.5% 0 1.5%;
 }
+
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 nav ul img {
   width: 8%;
   height: 8%;
   margin: 2%;
   margin-right: 40%;
 }
+
 nav ul li {
   padding: 2.3rem;
   text-transform: uppercase;
   display: inline-block;
 }
+
 nav ul .nav-item {
   letter-spacing: 2px;
+  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   color: #18223b;
 }
@@ -79,26 +95,35 @@ nav ul .nav-item {
 #apropos {
   height: 100vh;
 }
+
 #apropos h1 {
   padding: 3% 22%;
   text-align: center;
 }
+
 #apropos .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
   color: white;
   text-align: center;
   padding: 6% 3%;
 }
+
 #apropos .presentation .card {
   width: 100%;
   border: 1px solid #dfbf91;
   margin-left: 2%;
   padding: 5% 8%;
   border-radius: 5px;
-  box-shadow: 3px 2px 2px #dfbf91;
+  -webkit-box-shadow: 3px 2px 2px #dfbf91;
+          box-shadow: 3px 2px 2px #dfbf91;
 }
+
 #apropos .macaron img {
   height: 30%;
   width: 22%;
@@ -111,16 +136,26 @@ nav ul .nav-item {
 #roomsSection {
   background: #18223b;
 }
+
 #roomsSection #roomsContainer {
   width: 80%;
   max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   padding: 50px 0;
 }
+
 #roomsSection #roomsContainer h2 {
   text-transform: uppercase;
   height: 100px;
@@ -128,42 +163,71 @@ nav ul .nav-item {
   color: #e4e5e4;
   margin-bottom: 30px;
 }
+
 #roomsSection #roomsContainer .roomCard {
   margin: 15px 0;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.616);
+  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.616);
+          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.616);
   color: whitesmoke;
   width: 100%;
   height: 150px;
   border-radius: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
+
 #roomsSection #roomsContainer .roomCard:hover {
   height: 330px;
 }
+
 #roomsSection #roomsContainer .roomCard .titleAndSynopsis {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 66% 34%;
-  grid-template-rows: 1fr;
-  grid-template-areas: "title synopsis";
+  -ms-grid-columns: 66% 34%;
+      grid-template-columns: 66% 34%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "title synopsis";
 }
+
 #roomsSection #roomsContainer .roomCard .titleAndSynopsis h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: title;
   padding: 0 5px;
   font-size: 2.2rem;
   text-align: center;
   font-weight: 600;
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.651);
 }
+
 #roomsSection #roomsContainer .roomCard .titleAndSynopsis .roomSynopsis {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: synopsis;
   max-height: 5.2rem;
   text-align: center;
@@ -176,6 +240,7 @@ nav ul .nav-item {
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
 }
+
 @media screen and (max-width: 800px) {
   #roomsSection #roomsContainer .roomCard .titleAndSynopsis .roomSynopsis {
     max-height: 3.9rem;
@@ -190,6 +255,7 @@ nav ul .nav-item {
     -webkit-line-clamp: 3;
   }
 }
+
 #roomsSection #roomsContainer .roomCard h5 {
   color: #f7b32b;
   position: absolute;
@@ -197,43 +263,69 @@ nav ul .nav-item {
   left: 10px;
   font-size: 1rem;
   border-radius: 20px;
-  transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
 }
+
 #roomsSection #roomsContainer .roomCard p {
   width: 92%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 #roomsSection #roomsContainer .roomCard p .roomResaButton {
   background: #f7b32b;
-  box-shadow: 3px 3px 5px rgba(158, 158, 158, 0.651);
+  -webkit-box-shadow: 3px 3px 5px rgba(158, 158, 158, 0.651);
+          box-shadow: 3px 3px 5px rgba(158, 158, 158, 0.651);
   width: 40%;
   max-width: 300px;
   height: 30px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   font-size: 1.4rem;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
 #roomsSection #roomsContainer .roomCard p .roomResaButton:hover {
   color: black;
   cursor: pointer;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
+
 #roomsSection #roomsContainer .roomCard p .roomSeeDetails {
   width: 40%;
   font-weight: 300;
   font-size: 0.8rem;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
+
 #roomsSection #roomsContainer .roomCard p .roomSeeDetails::after {
   content: "";
   position: absolute;
@@ -242,22 +334,29 @@ nav ul .nav-item {
   width: 22%;
   right: 0;
 }
+
 #roomsSection #roomsContainer .roomCard p .roomSeeDetails:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   cursor: pointer;
 }
+
 #roomsSection #roomsContainer .roomCard p .roomSeeDetails:hover::after {
   border: 1px solid whitesmoke;
 }
+
 #roomsSection #roomCard1 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chateau-ambulant.jpg") center/cover;
 }
+
 #roomsSection #roomCard2 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chucky.png") center/cover;
 }
+
 #roomsSection #roomCard3 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/souterrainsjpg.jpg") right/cover;
 }
+
 #roomsSection #roomCard4 {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/star-wars-death-star-2.jpg") center/cover;
 }
@@ -266,29 +365,43 @@ nav ul .nav-item {
   background: #18223b;
   color: #e4e5e4;
 }
+
 #resaSection #resaContainer {
   width: 80%;
   margin: 0 auto;
   padding-bottom: 70px;
 }
+
 #resaSection #resaContainer h2 {
   text-transform: uppercase;
   height: 100px;
   padding-top: 60px;
 }
+
 #resaSection #resaContainer #resaInputs {
   height: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #resaSection #resaContainer #resaInputs label {
   color: #f6a11c;
   font-size: 1.2rem;
   margin: 10px 0;
 }
+
 #resaSection #resaContainer #resaInputs select,
 #resaSection #resaContainer #resaInputs input {
   font-size: 1.1rem;
@@ -299,44 +412,73 @@ nav ul .nav-item {
   border-radius: 20px;
   text-align: center;
 }
+
 #resaSection #resaContainer #resaInputs select option,
 #resaSection #resaContainer #resaInputs input option {
   font-size: 1.2rem;
 }
+
 #resaSection #resaContainer .flexColCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext {
   position: relative;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaAvailabilitiesTitle {
   font-size: 1.3rem;
   color: #f6a11c;
   margin-bottom: 20px;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 {
   width: 50%;
   margin-right: 30px;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine {
   width: 100%;
   margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine:after,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine:after {
   content: "";
@@ -345,12 +487,14 @@ nav ul .nav-item {
   bottom: -10px;
   width: 93%;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaHour,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaHour {
   width: 65%;
   text-align: left;
   font-size: 1.3rem;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaAvailable,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaAvailable {
   width: 25%;
@@ -360,23 +504,30 @@ nav ul .nav-item {
   color: #1e1e1e;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
+  -webkit-box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
+          box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaAvailable:hover,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaAvailable:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaUnavailable,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaUnavailable {
   width: 25%;
   text-align: center;
   text-transform: uppercase;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaPreviousNextButtons {
   margin: 40px 0;
   padding-left: 70px;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaPreviousNextButtons button {
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -389,6 +540,7 @@ nav ul .nav-item {
   margin: 0 2px;
   cursor: pointer;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaNextButton {
   position: absolute;
   bottom: 20px;
@@ -397,15 +549,115 @@ nav ul .nav-item {
   width: 150px;
   background: #f6a11c;
   color: #1e1e1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   border-radius: 15px;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaNextButton:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
+/* The Modal (background) */
+.modal {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  min-height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #18223b;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  height: 600px;
+  /* The Close Button */
+}
+
+.modal-content #recapModalContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 70% 15%;
+      grid-template-columns: 15% 70% 15%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "prev descr res";
+}
+
+.modal-content #recapModalContainer #btnReturnToResa {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: prev;
+}
+
+.modal-content #recapModalContainer #btnReturnToResa #recapModelContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: descr;
+}
+
+.modal-content #recapModalContainer #btnReturnToResa #recapModelContent form .flexColLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-content #recapModalContainer #btnReturnToResa #recapModelContent #btnConfirmResa {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: res;
+}
+
+.modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-content .close:hover, .modal-content .close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
