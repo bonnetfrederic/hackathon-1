@@ -99,6 +99,14 @@ nav ul .nav-item {
   border-radius: 5px;
   box-shadow: 3px 2px 2px #dfbf91;
 }
+#apropos .macaron img {
+  height: 30%;
+  width: 22%;
+  position: relative;
+  top: 10%;
+  left: 70%;
+  z-index: 1;
+}
 
 #roomsSection {
   background: #18223b;
