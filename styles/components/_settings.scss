@@ -1,7 +1,10 @@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Variables ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ##### (rootpath fix)
+// `$rootpath = "../..";` on local server, but must be `$rootpath = "./..";` on Github
+// *Solution*: use a global variable (`$rootpath = "../.." !global;`), overridden by a '_rootpathLocal.scss' file (with `$rootpath = "./..";`) that is then ignored during the 'push' process.
+
 $rootpath: "./.."; // overidden by _rootpathLocal.scss locally only, because file ignored in .gitignore
 
-// font inclusion example
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Fonts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @font-face {
   font-family: "Oswald-Regular";
   src: url("#{$rootpath}/assets/fonts/Oswald/Oswald-Regular.ttf");
@@ -18,6 +21,12 @@ $rootpath: "./.."; // overidden by _rootpathLocal.scss locally only, because fil
 
 $font-1: "Oswald-Regular", sans-serif;
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Main colours ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$color-dark: #1e1e1e;
+$color-primary: #18223b;
+$color-secondary: #f6a11c;
+$color-light: #e4e5e4;
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ General ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * {
   margin: 0;
@@ -30,8 +39,3 @@ body {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Spec ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Main colours ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:root {
-  --banner-c: #f6a11c;
-}

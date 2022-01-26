@@ -1,0 +1,32 @@
+#contact {
+  h2 {
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  .contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .info {
+    line-height: 4;
+    margin-left: 3rem;
+    font-family: "";
+
+    // .map-responsive {
+    //   overflow: hidden;
+    //   padding-bottom: 56.25%;
+    //   position: relative;
+    //   height: 0;
+    // }
+
+    // .map-responsive iframe {
+    //   left: 0;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   position: absolute;
+    // }
+  }
+}
