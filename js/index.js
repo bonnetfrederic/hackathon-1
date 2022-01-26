@@ -169,3 +169,27 @@ btnConfirmResa.addEventListener('click', () => {
     alert("Merci de bien vouloir saisir vos nom, téléphone et email");
   }
 });
+
+// Selects the parent roomCard number of the clicked 'résa' button and redirets to resa section with the good room pre-selected
+document.querySelectorAll('.roomResaButton').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    let roomCardNumber = navigator.userAgent.match(/firefox|fxios/i) ? e.explicitOriginalTarget.offsetParent.id : e.path[2].id;
+    switch (roomCardNumber) {
+      case 'roomCard1':
+        roomSelect.value = "castle";
+        break;
+      case 'roomCard2':
+        roomSelect.value = "chucky";
+        break;
+      case 'roomCard3':
+        roomSelect.value = "underground";
+        break;
+      case 'roomCard4':
+        roomSelect.value = "star-wars";
+        break;
+      default:
+        null;
+    }
+    resaSection.scrollIntoView({behavior: 'smooth'});
+  });
+});
