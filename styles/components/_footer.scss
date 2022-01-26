@@ -1,0 +1,42 @@
+footer {
+  background-color: $color-dark;
+  .foot-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 5%;
+    .logo {
+      .secondary-icon {
+        height: 40px;
+      }
+    }
+    .ft-c {
+      i {
+        margin: 10px;
+        font-size: 30px;
+        color: white;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      i:hover {
+        transform: scale(1.5);
+      }
+      h4 {
+        margin-bottom: 15px;
+        color: $color-secondary;
+      }
+    }
+  }
+  .mentions {
+    text-align: center;
+    p {
+      color: white;
+    }
+    a {
+      color: white;
+      font-size: 16px;
+      font-family: "Oswald ExtraLight";
+    }
+  }
+}
