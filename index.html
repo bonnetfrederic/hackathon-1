@@ -13,44 +13,49 @@
 
 <body>
   <header>
-    <nav class="header">
-      <ul>
-        <img src="./assets/img/logo-mysterio-bleu.svg" alt="">
-        <li><a href="#">A propos</a></li>
-        <li><a href="#">Nos rooms</a></li>
-        <li><a href="#">Réservations</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="container">
+      <input id="toggle" type="checkbox">    
+      <label class="toggle-container" for="toggle">
+          <span class="button button-toggle"></span>
+      </label>
+      <nav class="navbar">
+        <ul>
+          <img src="/assets/img/logo mysterio bleu.svg" alt="">
+          <li><a href="#" class="nav-item active">A propos</a></li>
+          <li><a href="#" class="nav-item">Nos rooms</a></li>
+          <li><a href="#" class="nav-item">Réservations</a></li>
+          <li><a href="#" class="nav-item">Contact</a></li>
+          <span class="indicator"></span>
+        </ul>
+      </nav>
+    </div>
   <main>
 
     <section id="apropos">
-      <!-- <video autoplay muted loop id="myVideo">
-        <source src="assets/video/yt1s.com - THE DARK TIMES  Star Wars Short Film 8K.mp4" type="video/mp4">
-      </video> -->
-      <h1> Plonger dans vos univers préférés!</h1>
+      <h1> Oserez-vous relever les défis de MYSTERIO?</h1>
       <div class="presentation">
         <div class="card">
-          <div class="circle"></div>
-          <h2>lorem ipsum</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore nemo obcaecati minus id autem
-            commodi eum quis, ut itaque!</p>
+        <div class="circle">
+          <!-- <img src="/assets/img/mysterio interrogation.svg" alt=""> -->
+        </div>
+          <h2>Qui sommes nous?</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore nemo obcaecati minus id autem commodi eum quis, ut itaque!</p>
         </div>
         <div class="card">
           <div class="circle"></div>
-          <h2>lorem ipsum</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos
-            magnam placeat consectetur deleniti accusamus minus quia?</p>
+          <h2>Quest-ce qu'un escape game?</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos magnam placeat consectetur deleniti accusamus minus quia?</p>
         </div>
         <div class="card">
           <div class="circle"></div>
-          <h2>lorem ipsum</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos
-            magnam placeat consectetur deleniti accusamus minus quia?</p>
+          <h2>A combien peut-on jouer?</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum mollitia sapiente eveniet dignissimos magnam placeat consectetur deleniti accusamus minus quia?</p>
         </div>
       </div>
-    </section>
+      <!-- <div class="macaron">
+        <img src="/assets/img/starwars.png" alt="">
+      </div>   -->
+    </section>  
 
 
     <section id="roomsSection">
@@ -219,6 +224,26 @@
       </div>
     </section>
 
+    <section id="contact">
+      <h2>CONTACT</h2>
+      <div class="contact">
+        <!-- <div class="info"> -->
+          <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.904369619048!2d-0.5604026845911375!3d44.86424157909848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd55288c1260084d%3A0xd2f7114eb550af0e!2s59%20Rue%20Lucien%20Faure%2C%2033300%20Bordeaux!5e0!3m2!1sfr!2sfr!4v1643124279950!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        <!-- </div> -->
+        <!-- <div class="info">
+          <h3>MYSTERIO ESCAPE GAME - BORDEAUX</h3>
+          <p>59 rue Lucien Faure Building, 33000 Bordeaux</p>
+          <p>01 48 37 64 24 </p>
+          <a href="mailto:contact@mysteriogame.com">email</a>
+          <p>Du mardi au Dimanche 10H00-23H00</p>
+        </div> -->
+
+      </div>
+
+    </section>
+    
   </main>
 
   <script src="js/index.js"></script>
