@@ -1,0 +1,38 @@
+#presentation {
+  .prez {
+    display: flex;
+    justify-content: center;
+    padding: 0 10%;
+    margin: 10% 0;
+    line-height: 1.75;
+    @media screen and (max-width: 933px) {
+      flex-direction: column;
+    }
+
+    .card {
+      // border: 1px solid black;
+      padding: 5%;
+      width: 100%;
+      text-align: center;
+      .card + .card {
+        margin-left: 3%;
+      }
+      .circle img {
+        height: 111px;
+        margin-bottom: 15%;
+        @media screen and (max-width: 933px) {
+          margin-bottom: 5%;
+        }
+      }
+
+      h2 {
+        color: $color-secondary;
+        text-transform: uppercase;
+        margin-bottom: 5%;
+      }
+      strong {
+        color: $color-secondary;
+      }
+    }
+  }
+}
