@@ -170,7 +170,7 @@ btnConfirmResa.addEventListener('click', () => {
   }
 });
 
-// Selects the parent roomCard number of the clicked 'résa' button and redirets to resa section with the good room pre-selected
+// Selects the parent roomCard number of the clicked 'résa' button and redirects to resa section with the good room pre-selected
 document.querySelectorAll('.roomResaButton').forEach((btn) => {
   btn.addEventListener('click', (e) => {
     let roomCardNumber = navigator.userAgent.match(/firefox|fxios/i) ? e.explicitOriginalTarget.offsetParent.id : e.path[2].id;
