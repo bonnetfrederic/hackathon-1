@@ -3,8 +3,8 @@ body {
   background-size: cover;
   height: 100vh;
 }
-.header {
-  width: 100%;
+.navbar {
+  max-width: 100%;
   //   background-color: var(--banner-c);
 }
 
@@ -28,14 +28,11 @@ nav {
       display: inline-block;
     }
 
-    a {
+    .nav-item {
       letter-spacing: 2px;
       transition: all ease 0.5s;
       color: #18223b;
     }
-
-    a:hover {
-      opacity: 0.75;
-    }
   }
 }
+
