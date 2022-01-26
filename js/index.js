@@ -9,6 +9,7 @@ let resaData = new Object();
 // changes the resa button opacity when clicked
 resaButtons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    // console.log(e);
     resaButtons.forEach((btn) => {
       btn.style.opacity = "1";
     });
@@ -21,7 +22,15 @@ resaButtons.forEach((btn) => {
       resaButtonClicked = false;
       // console.log(`resaButtonClicked is now: ${resaButtonClicked}`);
     }
-    resaHourB = e.path[1].childNodes[1].childNodes[0].data;
+
+    // gets DOM object value depending on the browser
+    if(navigator.userAgent.match(/firefox|fxios/i)){
+      resaHourB = e.explicitOriginalTarget.offsetParent.childNodes[1].childNodes[0].data;
+    } else {
+      resaHourB = e.path[1].childNodes[1].childNodes[0].data;
+    }
+
+    // resaHourB = e.path[1].childNodes[1].childNodes[0].data;
     // console.log("resaHourB: " + resaHourB);
   });
 });
@@ -30,7 +39,15 @@ resaButtons.forEach((btn) => {
 resaHourLines.forEach((line) => {
   line.addEventListener('click', (e) => {
     // console.log(e);
-    resaHourL = e.path[0].childNodes[0].data;
+
+    // gets DOM object value depending on the browser
+    if(navigator.userAgent.match(/firefox|fxios/i)){
+      resaHourL = e.explicitOriginalTarget.offsetParent.childNodes[1].childNodes[0].data;
+    } else {
+      resaHourL = e.path[1].childNodes[1].childNodes[0].data;
+    }
+
+    // resaHourL = e.path[0].childNodes[0].data;
     if (resaHourL == "Réserver" || resaHourL == "Complet") {
       resaHourL = resaHourB;
     }
@@ -51,7 +68,7 @@ resaNextButton.addEventListener('click', () => {
     // console.log("resaData.gameDate: " + resaData.gameDate);
     resaData.gameHour = resaHourL;
     // console.log("resaData.gameHour: " + resaData.gameHour);
-    console.log(resaData);
+    // console.log(resaData);
     displayData(resaData);
   } else {
     alert("Merci de renseigner: la salle, le nombre de joueurs, la date et l'heure de votre partie.");
