@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -571,8 +572,8 @@ nav ul .nav-item {
 
 /* The Modal (background) */
 .modal {
-  display: block;
-  /* Hidden by default */
+  display: none;
+  /* à remettre avant mise en prod !!! */
   position: fixed;
   /* Stay in place */
   z-index: 1;
@@ -591,10 +592,10 @@ nav ul .nav-item {
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
+  /* Modal Content */
 }
 
-/* Modal Content */
-.modal-content {
+.modal .modal-content {
   background-color: #18223b;
   margin: auto;
   padding: 20px;
@@ -604,7 +605,7 @@ nav ul .nav-item {
   /* The Close Button */
 }
 
-.modal-content #recapModalContainer {
+.modal .modal-content #recapModalContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 15% 70% 15%;
@@ -614,19 +615,12 @@ nav ul .nav-item {
       grid-template-areas: "prev descr res";
 }
 
-.modal-content #recapModalContainer #btnReturnToResa {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: prev;
+.modal .modal-content #recapModalContainer h3 {
+  color: #f6a11c;
+  font-size: 1.3rem;
 }
 
-.modal-content #recapModalContainer #btnReturnToResa #recapModelContent {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: descr;
-}
-
-.modal-content #recapModalContainer #btnReturnToResa #recapModelContent form .flexColLeft {
+.modal .modal-content #recapModalContainer form .flexColLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -637,25 +631,50 @@ nav ul .nav-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
-.modal-content #recapModalContainer #btnReturnToResa #recapModelContent #btnConfirmResa {
+.modal .modal-content #recapModalContainer #btnReturnToResa {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: prev;
+  height: 40px;
+  width: 100%;
+  background: #f6a11c;
+  color: #1e1e1e;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.modal .modal-content #recapModalContainer #recapModalContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: descr;
+  padding: 20px;
+}
+
+.modal .modal-content #recapModalContainer #btnConfirmResa {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: res;
+  height: 40px;
+  width: 100%;
+  background: #f6a11c;
+  color: #1e1e1e;
+  border-radius: 15px;
+  margin-top: 400px;
 }
 
-.modal-content .close {
+.modal .modal-content .close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.modal-content .close:hover, .modal-content .close:focus {
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
   color: red;
   text-decoration: none;
   cursor: pointer;
