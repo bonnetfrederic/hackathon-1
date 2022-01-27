@@ -1,29 +1,44 @@
 #contact {
-  h2 {
-    text-align: left;
-    margin: 5% 0 5% 10%;
-  }
-  .contact {
+  height: auto;
+  .contact-info {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex: wrap;
+    width: 80%;
+    margin: auto;
+    padding: 3%;
+    // .map {
+    //   width: 100%;
+    //   height: auto;
+    //   flex: 50%;
+    // }
 
-    .info {
-      line-height: 2.75;
-      margin-left: 5rem;
-      margin-right: 5rem;
-      font-family: "";
+    // .contact {
+    //   width: 100%;
+    //   height: auto;
+    //   flex: 50%;
+    // }
+    // h2 {
+    //   text-align: left;
+    //   margin: 5% 0 5% 10%;
+    // }
+    // .contact {
+    //   display: flex;
+    //   justify-content: space-evenly;
+    //   .info {
+    //     line-height: 2;
+    //     margin-left: 5rem;
+    //     margin-right: 5rem;
+    //     font-family: "";
 
-      // img {
-      // }
-      h3 {
-        font-size: 2rem;
-        font-family: "Oswald-ExtraLight";
-      }
-      p {
-        font-size: 1.75rem;
-        font-family: "Oswald-SemiBold";
-      }
-    }
+    //     h3 {
+    //       font-size: 2rem;
+    //       font-family: "Oswald-ExtraLight";
+    //     }
+    //     p {
+    //       font-size: 1.75rem;
+    //       font-family: "Oswald-SemiBold";
+    //     }
+    //   }
+    // }
   }
 }

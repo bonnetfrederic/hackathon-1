@@ -81,13 +81,14 @@ body {
 }
 
 .navbar .logo .icon {
-  height: 40px;
+  height: 50px;
+  margin-top: 15%;
 }
 
 @media screen and (max-width: 1190px) {
   .navbar .logo .icon {
-    margin-top: 5%;
     margin-left: 5%;
+    margin-top: 10%;
   }
 }
 
@@ -101,7 +102,7 @@ body {
 }
 
 .navbar .nav-list .list-item {
-  padding: 2rem;
+  padding: 5rem 2rem;
   text-transform: uppercase;
   display: inline-block;
 }
@@ -139,7 +140,7 @@ body {
     display: block;
     position: absolute;
     right: 2rem;
-    top: 1.75rem;
+    top: 3.75rem;
   }
 }
 
@@ -158,30 +159,29 @@ body {
   display: block;
 }
 
-h1 {
-  padding: 3% 22%;
-  text-align: center;
-  color: #18223b;
-}
-
-@media screen and (max-width: 816px) {
-  h1 {
-    padding: 3% 22%;
-    font-size: 3rem;
-    margin-bottom: 5%;
-  }
-}
-
 #apropos {
   margin-bottom: 15%;
 }
-
 #apropos .center iframe {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
 }
+#apropos h1 {
+  padding: 3% 22%;
+  text-align: center;
+  color: #18223b;
+}
+
+@media screen and (max-width: 816px) {
+  #apropos h1 {
+    padding: 3% 22%;
+    font-size: 3rem;
+    margin-bottom: 5%;
+  }
+}
+
 
 .macaron img {
   height: 30%;
@@ -190,6 +190,44 @@ h1 {
   top: 10%;
   left: 70%;
   z-index: 1;
+}
+
+#presentation .prez {
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+  margin: 10% 0;
+  line-height: 1.75;
+}
+@media screen and (max-width: 933px) {
+  #presentation .prez {
+    flex-direction: column;
+  }
+}
+#presentation .prez .card {
+  padding: 5%;
+  width: 100%;
+  text-align: center;
+}
+#presentation .prez .card .card + .card {
+  margin-left: 3%;
+}
+#presentation .prez .card .circle img {
+  height: 111px;
+  margin-bottom: 15%;
+}
+@media screen and (max-width: 933px) {
+  #presentation .prez .card .circle img {
+    margin-bottom: 5%;
+  }
+}
+#presentation .prez .card h2 {
+  color: #f6a11c;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+#presentation .prez .card strong {
+  color: #f6a11c;
 }
 
 #roomsSection {
@@ -776,36 +814,17 @@ h1 {
   cursor: pointer;
 }
 
-#contact h2 {
-  text-align: left;
-  margin: 5% 0 5% 10%;
+#contact {
+  height: auto;
 }
 
-#contact .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#contact .contact-info {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
+  flex: wrap;
+  width: 80%;
+  margin: auto;
+  padding: 3%;
 
-#contact .contact .info {
-  line-height: 2.75;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  font-family: "";
-}
-
-#contact .contact .info h3 {
-  font-size: 2rem;
-  font-family: "Oswald-ExtraLight";
-}
-
-#contact .contact .info p {
-  font-size: 1.75rem;
-  font-family: "Oswald-SemiBold";
 }
 
 footer {
@@ -823,10 +842,11 @@ footer .foot-nav {
           align-items: center;
   color: white;
   padding: 5%;
+  line-height: 2;
 }
 
 footer .foot-nav .logo .secondary-icon {
-  height: 40px;
+  height: 60px;
 }
 
 footer .foot-nav .ft-c i {
