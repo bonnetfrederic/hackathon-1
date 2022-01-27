@@ -47,7 +47,10 @@ body::selection {
   color: var(--white);
 }
 
-.navbar {
+header {
+  background: url(/assets/img/fond-home.png) center/cover;
+}
+header .navbar {
   max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,34 +63,34 @@ body::selection {
 }
 
 @media screen and (max-width: 1190px) {
-  .navbar {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+
+  header .navbar {
+    flex-direction: column;
+
   }
 }
 
 @media screen and (max-width: 1190px) {
-  .navbar .logo {
+  header .navbar .logo {
     width: 100%;
   }
 }
 
-.navbar .logo .icon {
+header .navbar .logo .icon {
+
   height: 50px;
   margin-top: 22px;
 }
 
 @media screen and (max-width: 1190px) {
-  .navbar .logo .icon {
+  header .navbar .logo .icon {
     margin-left: 5%;
     margin-top: 116px;
   }
 }
 
 @media screen and (max-width: 1190px) {
-  .navbar .nav-list {
+  header .navbar .nav-list {
     width: 40%;
     text-align: center;
     padding-top: 3%;
@@ -95,33 +98,37 @@ body::selection {
   }
 }
 
-.navbar .nav-list .list-item {
+header .navbar .nav-list .list-item {
+
   padding: 5rem 2rem;
   text-transform: uppercase;
   display: inline-block;
 }
 
 @media screen and (max-width: 1190px) {
-  .navbar .nav-list .list-item {
+  header .navbar .nav-list .list-item {
     display: block;
     padding: 3%;
   }
 }
 
-.navbar .nav-list .list-item a {
+header .navbar .nav-list .list-item a {
+
   letter-spacing: 2px;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   color: #18223b;
 }
 
-.navbar .nav-list .list-item .underline {
+header .navbar .nav-list .list-item .underline {
+
   display: inline-block;
   position: relative;
   color: #18223b;
 }
 
-.navbar .nav-list .list-item .underline::after {
+header .navbar .nav-list .list-item .underline::after {
+
   content: "";
   position: absolute;
   width: 100%;
@@ -139,14 +146,12 @@ body::selection {
   transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
 }
 
-.navbar .nav-list .list-item .underline:hover::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+header .navbar .nav-list .list-item .underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
+header .navbar #hamburger {
 
-.navbar #hamburger {
   display: none;
   top: 20%;
   left: 80%;
@@ -161,7 +166,8 @@ body::selection {
   z-index: 10;
 }
 
-.navbar #hamburger #hamburger:active {
+header .navbar #hamburger #hamburger:active {
+
   display: block;
   position: absolute;
   right: 2rem;
@@ -169,7 +175,7 @@ body::selection {
 }
 
 @media screen and (max-width: 1190px) {
-  .navbar #hamburger {
+  header .navbar #hamburger {
     display: block;
     position: absolute;
     right: 2rem;
@@ -178,31 +184,31 @@ body::selection {
 }
 
 @media screen and (max-width: 924px) {
-  .navbar #hamburger {
+  header .navbar #hamburger {
     display: block;
     position: absolute;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .navbar #hamburger {
+  header .navbar #hamburger {
     display: block;
     position: absolute;
   }
 }
 
 @media screen and (max-width: 414px) {
-  .navbar #hamburger {
+  header .navbar #hamburger {
     display: block;
     position: absolute;
   }
 }
 
-.navbar #hamburger #hamburger:hover {
+header .navbar #hamburger #hamburger:hover {
   cursor: pointer;
 }
+header .navbar #hamburger span {
 
-.navbar #hamburger span {
   position: absolute;
   left: 50%;
   width: 26px;
@@ -210,50 +216,55 @@ body::selection {
   background-color: #000;
 }
 
-.navbar #hamburger span:nth-child(1) {
+header .navbar #hamburger span:nth-child(1) {
+
   top: 0;
   -webkit-transform: translateX(-50%) translateY(0);
           transform: translateX(-50%) translateY(0);
 }
 
-.navbar #hamburger span:nth-child(2) {
+header .navbar #hamburger span:nth-child(2) {
+
   top: 8px;
   opacity: 1;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-.navbar #hamburger span:last-child {
+header .navbar #hamburger span:last-child {
+
   top: 16px;
   -webkit-transform: translateX(-50%) translateY(0);
           transform: translateX(-50%) translateY(0);
 }
 
-.navbar #hamburger.active span:nth-child(1) {
+header .navbar #hamburger.active span:nth-child(1) {
+
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(0) rotate(45deg);
           transform: translateX(-50%) translateY(0) rotate(45deg);
 }
 
-.navbar #hamburger.active span:nth-child(2) {
+header .navbar #hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+header .navbar #hamburger.active span:last-child {
 
-.navbar #hamburger.active span:last-child {
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(0) rotate(-45deg);
           transform: translateX(-50%) translateY(0) rotate(-45deg);
 }
 
-.navbar .active {
+header .navbar .active {
+
   display: block;
   position: absolute;
   height: 30%;
   width: 35%;
   background-color: #b4bbc4;
   border-radius: 5px;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  transition: all 0.25s ease-out;
+
   text-align: center;
   left: 60%;
   top: 18%;
@@ -345,6 +356,11 @@ body::selection {
   padding: 5% 10% 55% 5%;
   height: 0;
 }
+@media screen and (max-width: 414px) {
+  .video-container {
+    margin-bottom: 120px;
+  }
+}
 
 .video-container iframe,
 .video-container object,
@@ -357,7 +373,6 @@ body::selection {
 }
 
 #apropos {
-  background-image: url(/assets/img/fond-home.png) center/cover;
   padding-bottom: 100px;
   margin-bottom: 30px;
 }
@@ -372,7 +387,21 @@ body::selection {
 @media screen and (max-width: 816px) {
   #apropos h1 {
     padding: 150px 22%;
-    font-size: 3rem;
+    font-size: 3.7rem;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 644px) {
+  #apropos h1 {
+    padding: 100px 14%;
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 537px) {
+  #apropos h1 {
+    padding: 80px 14%;
+    font-size: 3.3rem;
     margin-bottom: 60px;
   }
 }
@@ -432,7 +461,8 @@ body::selection {
         grid-template-columns: 1fr;
     -ms-grid-rows: 30% 70%;
         grid-template-rows: 30% 70%;
-        grid-template-areas: "img" "txt";
+        grid-template-areas: "img"
+ "txt";
   }
 }
 
