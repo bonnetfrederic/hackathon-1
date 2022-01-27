@@ -313,9 +313,15 @@ body {
   height: 330px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   #roomsSection #roomsContainer .roomCard:hover {
     height: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #roomsSection #roomsContainer .roomCard:hover {
+    height: 500px;
   }
 }
 
@@ -325,9 +331,15 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   #roomsSection #roomsContainer .roomCard:hover {
     height: 630px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #roomsSection #roomsContainer .roomCard:hover {
+    height: 600px;
     -ms-grid-rows: 25% 75%;
         grid-template-rows: 25% 75%;
   }

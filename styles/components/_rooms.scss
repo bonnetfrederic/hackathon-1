@@ -41,14 +41,20 @@
       }
       &:hover {
         height: 330px;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1000px) {
           height: 400px;
+        }
+        @media screen and (max-width: 800px) {
+          height: 500px;
         }
         @media screen and (max-width: 600px) {
           height: 500px;
         }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 550px) {
           height: 630px;
+        }
+        @media screen and (max-width: 500px) {
+          height: 600px;
           grid-template-rows: 25% 75%;
         }
         @media screen and (max-width: 320px) {
