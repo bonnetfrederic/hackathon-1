@@ -1,5 +1,5 @@
 #apropos {
-  background-image: url(/assets/img/fond-home.png) center/cover;
+  // background: url(/assets/img/fond-home.png) center/cover;
   // background: rgb(252, 252, 252);
   // background: linear-gradient(
   //   180deg,
@@ -18,7 +18,17 @@
     font-family: "Oswald-SemiLight";
     @media screen and (max-width: 816px) {
       padding: 150px 22%;
-      font-size: 3rem;
+      font-size: 3.7rem;
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 644px) {
+      padding: 100px 14%;
+      font-size: 3.5rem;
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 537px) {
+      padding: 80px 14%;
+      font-size: 3.3rem;
       margin-bottom: 60px;
     }
 
