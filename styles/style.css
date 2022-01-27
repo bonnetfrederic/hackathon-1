@@ -40,7 +40,6 @@ body {
 .navbar {
   max-width: 100%;
   display: flex;
-  background-color: #e4e5e4;
   justify-content: space-around;
   align-items: center;
 }
@@ -82,6 +81,27 @@ body {
     display: block;
     padding: 3%;
   }
+}
+.navbar .nav-list .list-item .underline {
+  display: inline-block;
+  position: relative;
+  color: #18223b;
+}
+.navbar .nav-list .list-item .underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f6a11c;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.navbar .nav-list .list-item .underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .navbar .nav-list .list-item a {
   letter-spacing: 2px;
@@ -260,8 +280,7 @@ body {
 }
 
 #apropos {
-  background: #fcfcfc;
-  background: linear-gradient(180deg, #fcfcfc 0%, #e4e5e4 0%, rgba(228, 229, 228, 0.180007037) 100%);
+  background-image: url(/assets/img/fond-home.png) center/cover;
   padding-bottom: 100px;
   margin-bottom: 30px;
 }

@@ -5,7 +5,7 @@
 .navbar {
   max-width: 100%;
   display: flex;
-  background-color: $color-light;
+  // background-image: url(/assets/img/fond-home.png);
   justify-content: space-around;
   align-items: center;
   @media screen and (max-width: 1190px) {
@@ -39,6 +39,27 @@
         display: block;
         // border: 1px solid $color-primary;
         padding: 3%;
+      }
+      .underline {
+        display: inline-block;
+        position: relative;
+        color: $color-primary;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $color-secondary;
+          transform-origin: bottom right;
+          transition: transform 0.3s ease-out;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
       }
 
       a {

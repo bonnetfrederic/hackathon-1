@@ -1,11 +1,12 @@
 #apropos {
-  background: rgb(252, 252, 252);
-  background: linear-gradient(
-    180deg,
-    rgba(252, 252, 252, 1) 0%,
-    rgba(228, 229, 228, 1) 0%,
-    rgba(228, 229, 228, 0.18000703699448528) 100%
-  );
+  background-image: url(/assets/img/fond-home.png) center/cover;
+  // background: rgb(252, 252, 252);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(252, 252, 252, 1) 0%,
+  //   rgba(228, 229, 228, 1) 0%,
+  //   rgba(228, 229, 228, 0.18000703699448528) 100%
+  // );
 
   padding-bottom: 100px;
   margin-bottom: 30px;
