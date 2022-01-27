@@ -50,6 +50,7 @@ body::selection {
 header {
   background: url(/assets/img/fond-home.png) center/cover;
 }
+
 header .navbar {
   max-width: 100%;
   display: -webkit-box;
@@ -63,10 +64,11 @@ header .navbar {
 }
 
 @media screen and (max-width: 1190px) {
-
   header .navbar {
-    flex-direction: column;
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -77,7 +79,6 @@ header .navbar {
 }
 
 header .navbar .logo .icon {
-
   height: 50px;
   margin-top: 22px;
 }
@@ -99,7 +100,6 @@ header .navbar .logo .icon {
 }
 
 header .navbar .nav-list .list-item {
-
   padding: 5rem 2rem;
   text-transform: uppercase;
   display: inline-block;
@@ -113,7 +113,6 @@ header .navbar .nav-list .list-item {
 }
 
 header .navbar .nav-list .list-item a {
-
   letter-spacing: 2px;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -121,14 +120,12 @@ header .navbar .nav-list .list-item a {
 }
 
 header .navbar .nav-list .list-item .underline {
-
   display: inline-block;
   position: relative;
   color: #18223b;
 }
 
 header .navbar .nav-list .list-item .underline::after {
-
   content: "";
   position: absolute;
   width: 100%;
@@ -147,11 +144,13 @@ header .navbar .nav-list .list-item .underline::after {
 }
 
 header .navbar .nav-list .list-item .underline:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
-header .navbar #hamburger {
 
+header .navbar #hamburger {
   display: none;
   top: 20%;
   left: 80%;
@@ -167,7 +166,6 @@ header .navbar #hamburger {
 }
 
 header .navbar #hamburger #hamburger:active {
-
   display: block;
   position: absolute;
   right: 2rem;
@@ -207,8 +205,8 @@ header .navbar #hamburger #hamburger:active {
 header .navbar #hamburger #hamburger:hover {
   cursor: pointer;
 }
-header .navbar #hamburger span {
 
+header .navbar #hamburger span {
   position: absolute;
   left: 50%;
   width: 26px;
@@ -217,14 +215,12 @@ header .navbar #hamburger span {
 }
 
 header .navbar #hamburger span:nth-child(1) {
-
   top: 0;
   -webkit-transform: translateX(-50%) translateY(0);
           transform: translateX(-50%) translateY(0);
 }
 
 header .navbar #hamburger span:nth-child(2) {
-
   top: 8px;
   opacity: 1;
   -webkit-transform: translateX(-50%);
@@ -232,14 +228,12 @@ header .navbar #hamburger span:nth-child(2) {
 }
 
 header .navbar #hamburger span:last-child {
-
   top: 16px;
   -webkit-transform: translateX(-50%) translateY(0);
           transform: translateX(-50%) translateY(0);
 }
 
 header .navbar #hamburger.active span:nth-child(1) {
-
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(0) rotate(45deg);
           transform: translateX(-50%) translateY(0) rotate(45deg);
@@ -248,23 +242,22 @@ header .navbar #hamburger.active span:nth-child(1) {
 header .navbar #hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-header .navbar #hamburger.active span:last-child {
 
+header .navbar #hamburger.active span:last-child {
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(0) rotate(-45deg);
           transform: translateX(-50%) translateY(0) rotate(-45deg);
 }
 
 header .navbar .active {
-
   display: block;
   position: absolute;
   height: 30%;
   width: 35%;
   background-color: #b4bbc4;
   border-radius: 5px;
+  -webkit-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
-
   text-align: center;
   left: 60%;
   top: 18%;
@@ -356,6 +349,7 @@ header .navbar .active {
   padding: 5% 10% 55% 5%;
   height: 0;
 }
+
 @media screen and (max-width: 414px) {
   .video-container {
     margin-bottom: 120px;
@@ -391,6 +385,7 @@ header .navbar .active {
     margin-bottom: 60px;
   }
 }
+
 @media screen and (max-width: 644px) {
   #apropos h1 {
     padding: 100px 14%;
@@ -398,6 +393,7 @@ header .navbar .active {
     margin-bottom: 60px;
   }
 }
+
 @media screen and (max-width: 537px) {
   #apropos h1 {
     padding: 80px 14%;
@@ -461,8 +457,7 @@ header .navbar .active {
         grid-template-columns: 1fr;
     -ms-grid-rows: 30% 70%;
         grid-template-rows: 30% 70%;
-        grid-template-areas: "img"
- "txt";
+        grid-template-areas: "img" "txt";
   }
 }
 
