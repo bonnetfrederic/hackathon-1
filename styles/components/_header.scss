@@ -40,6 +40,12 @@
         // border: 1px solid $color-primary;
         padding: 3%;
       }
+
+      a {
+        letter-spacing: 2px;
+        transition: all ease 0.5s;
+        color: $color-primary;
+      }
       .underline {
         display: inline-block;
         position: relative;
@@ -49,23 +55,17 @@
           position: absolute;
           width: 100%;
           transform: scaleX(0);
-          height: 2px;
+          height: 3px;
           bottom: 0;
           left: 0;
           background-color: $color-secondary;
           transform-origin: bottom right;
-          transition: transform 0.3s ease-out;
+          transition: transform 0.35s ease-out;
         }
         &:hover::after {
           transform: scaleX(1);
           transform-origin: bottom left;
         }
-      }
-
-      a {
-        letter-spacing: 2px;
-        transition: all ease 0.5s;
-        color: $color-primary;
       }
     }
   }

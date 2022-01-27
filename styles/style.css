@@ -82,6 +82,11 @@ body {
     padding: 3%;
   }
 }
+.navbar .nav-list .list-item a {
+  letter-spacing: 2px;
+  transition: all ease 0.5s;
+  color: #18223b;
+}
 .navbar .nav-list .list-item .underline {
   display: inline-block;
   position: relative;
@@ -92,21 +97,16 @@ body {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 3px;
   bottom: 0;
   left: 0;
   background-color: #f6a11c;
   transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.35s ease-out;
 }
 .navbar .nav-list .list-item .underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-}
-.navbar .nav-list .list-item a {
-  letter-spacing: 2px;
-  transition: all ease 0.5s;
-  color: #18223b;
 }
 .navbar #hamburger {
   display: none;
