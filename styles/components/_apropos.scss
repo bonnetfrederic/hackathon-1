@@ -1,38 +1,38 @@
-#presentation {
-  .prez {
-    display: flex;
-    justify-content: center;
-    padding: 0 10%;
-    margin: 10% 0;
-    line-height: 1.75;
-    @media screen and (max-width: 933px) {
-      flex-direction: column;
+#apropos {
+  background: rgb(252, 252, 252);
+  background: linear-gradient(
+    180deg,
+    rgba(252, 252, 252, 1) 0%,
+    rgba(228, 229, 228, 1) 0%,
+    rgba(228, 229, 228, 0.18000703699448528) 100%
+  );
+
+  padding-bottom: 100px;
+  margin-bottom: 30px;
+
+  h1 {
+    padding: 150px 22%;
+    text-align: center;
+    color: $color-primary;
+    font-family: "Oswald-SemiLight";
+    @media screen and (max-width: 816px) {
+      padding: 150px 22%;
+      font-size: 3rem;
+      margin-bottom: 60px;
     }
 
-    .card {
-      // border: 1px solid black;
-      padding: 5%;
-      width: 100%;
-      text-align: center;
-      .card + .card {
-        margin-left: 3%;
-      }
-      .circle img {
-        height: 111px;
-        margin-bottom: 15%;
-        @media screen and (max-width: 933px) {
-          margin-bottom: 5%;
-        }
-      }
-
-      h2 {
-        color: $color-secondary;
-        text-transform: uppercase;
-        margin-bottom: 5%;
-      }
-      strong {
-        color: $color-secondary;
-      }
+    strong {
+      font-family: "Oswald-SemiBold";
     }
   }
 }
+// .macaron {
+//   img {
+//     height: 30%;
+//     width: 22%;
+//     position: relative;
+//     top: 10%;
+//     left: 70%;
+//     z-index: 1;
+//   }
+// }
