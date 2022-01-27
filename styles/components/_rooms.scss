@@ -1,5 +1,4 @@
 #roomsSection {
-  // background: $color-primary;
   #roomsContainer {
     width: 80%;
     max-width: 1000px;
@@ -16,7 +15,6 @@
       color: $color-dark;
       margin-bottom: 30px;
     }
-    // modifier les cartes à partir d'ici
     .roomCard {
       margin: 15px 0;
       // box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.616);
@@ -80,11 +78,13 @@
           border-radius: 5px;
           text-align: center;
           margin: 15px;
-          text-transform: uppercase;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;  
+          padding-top: 3px;
+          text-transform: uppercase; 
           align-items: center;
+          transition: 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
         .hiddenButton {
           display: none;
@@ -164,6 +164,5 @@
           url("#{$rootpath}/assets/img/souterrainsjpg.jpg") right/cover;
       }
     }
-    // fin de la card
   }
 }

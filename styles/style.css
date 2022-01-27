@@ -359,20 +359,18 @@ body {
   border-radius: 5px;
   text-align: center;
   margin: 15px;
+  padding-top: 3px;
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#roomsSection #roomsContainer .roomCard .cardContent .roomResaButton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #roomsSection #roomsContainer .roomCard .cardContent .hiddenButton {
