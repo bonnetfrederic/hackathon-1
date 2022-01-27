@@ -7,10 +7,6 @@ h1 {
   font-size: 4rem;
 }
 
-h2 {
-  color: var(--banner-c);
-}
-
 li {
   list-style: none;
 }
@@ -23,20 +19,18 @@ body {
   font-family: "Oswald-Regular";
   src: url("./../assets/fonts/Oswald/Oswald-Regular.ttf");
 }
-
 @font-face {
   font-family: "Oswald-Semi-bold";
   src: url("./../assets/fonts/Oswald/Oswald-SemiBold.ttf");
 }
-
 @font-face {
   font-family: "Oswald-ExtraLight";
   src: url("./../assets/fonts/Oswald/Oswald-ExtraLight.ttf");
 }
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -52,221 +46,283 @@ body::selection {
 }
 
 body {
-  background-color: ffff;
-  background-size: cover;
+  user-select: none;
 }
 
 .navbar {
   max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
 @media screen and (max-width: 1190px) {
   .navbar {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 @media screen and (max-width: 1190px) {
   .navbar .logo {
     width: 100%;
   }
 }
-
 .navbar .logo .icon {
   height: 50px;
-  margin-top: 15%;
+  margin-top: 22px;
 }
-
 @media screen and (max-width: 1190px) {
   .navbar .logo .icon {
     margin-left: 5%;
-    margin-top: 10%;
+    margin-top: 116px;
   }
 }
-
 @media screen and (max-width: 1190px) {
   .navbar .nav-list {
-    width: 100%;
+    width: 40%;
     text-align: center;
     padding-top: 3%;
     display: none;
   }
 }
-
 .navbar .nav-list .list-item {
   padding: 5rem 2rem;
   text-transform: uppercase;
   display: inline-block;
 }
-
 @media screen and (max-width: 1190px) {
   .navbar .nav-list .list-item {
     display: block;
-    border: 1px solid #18223b;
     padding: 3%;
   }
 }
-
 .navbar .nav-list .list-item a {
   letter-spacing: 2px;
-  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   color: #18223b;
 }
-
-.navbar .hamburger {
-  display: none;
-}
-
-@media screen and (max-width: 1190px) {
-  .navbar .hamburger {
-    display: block;
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-  }
-}
-
-@media screen and (max-width: 1190px) {
-  .navbar .hamburger {
-    display: block;
-    position: absolute;
-    right: 2rem;
-    top: 3.75rem;
-  }
-}
-
-.navbar .hamburger .menu-line {
-  width: 1.25rem;
-  height: 0.2rem;
-  background-color: #18223b;
-  margin-bottom: 0.3rem;
-}
-
-.navbar .hamburger .hamburger:hover {
-  cursor: pointer;
-}
-
-.navbar .active {
-  display: block;
-}
-
-#apropos {
-  margin-bottom: 15%;
-}
-
-#apropos .center iframe {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
-}
-
-#apropos h1 {
-  padding: 3% 22%;
-  text-align: center;
+.navbar .nav-list .list-item .underline {
+  display: inline-block;
+  position: relative;
   color: #18223b;
 }
-
-@media screen and (max-width: 816px) {
-  #apropos h1 {
-    padding: 3% 22%;
-    font-size: 3rem;
-    margin-bottom: 5%;
+.navbar .nav-list .list-item .underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #f6a11c;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+.navbar .nav-list .list-item .underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.navbar #hamburger {
+  display: none;
+  top: 20%;
+  left: 80%;
+  width: 40px;
+  height: 22px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.navbar #hamburger #hamburger:active {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: 15%;
+}
+@media screen and (max-width: 1190px) {
+  .navbar #hamburger {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 123px;
   }
 }
-
-.macaron img {
+@media screen and (max-width: 924px) {
+  .navbar #hamburger {
+    display: block;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navbar #hamburger {
+    display: block;
+    position: absolute;
+  }
+}
+@media screen and (max-width: 414px) {
+  .navbar #hamburger {
+    display: block;
+    position: absolute;
+  }
+}
+.navbar #hamburger #hamburger:hover {
+  cursor: pointer;
+}
+.navbar #hamburger span {
+  position: absolute;
+  left: 50%;
+  width: 26px;
+  height: 2px;
+  background-color: #000;
+}
+.navbar #hamburger span:nth-child(1) {
+  top: 0;
+  transform: translateX(-50%) translateY(0);
+}
+.navbar #hamburger span:nth-child(2) {
+  top: 8px;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+.navbar #hamburger span:last-child {
+  top: 16px;
+  transform: translateX(-50%) translateY(0);
+}
+.navbar #hamburger.active span:nth-child(1) {
+  top: 50%;
+  transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+.navbar #hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.navbar #hamburger.active span:last-child {
+  top: 50%;
+  transform: translateX(-50%) translateY(0) rotate(-45deg);
+}
+.navbar .active {
+  display: block;
+  position: absolute;
   height: 30%;
-  width: 22%;
-  position: relative;
-  top: 10%;
-  left: 70%;
-  z-index: 1;
+  width: 35%;
+  background-color: #b4bbc4;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+  text-align: center;
+  left: 60%;
+  top: 18%;
+  opacity: 0.95;
 }
 
 #presentation .prez {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 0 10%;
   margin: 10% 0;
   line-height: 1.75;
 }
-
-@media screen and (max-width: 933px) {
+@media screen and (max-width: 1059px) {
   #presentation .prez {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 #presentation .prez .card {
   padding: 5%;
   width: 100%;
   text-align: center;
 }
-
+@media screen and (max-width: 1059px) {
+  #presentation .prez .card {
+    padding-bottom: 10%;
+  }
+}
 #presentation .prez .card .card + .card {
   margin-left: 3%;
 }
-
 #presentation .prez .card .circle img {
-  height: 111px;
+  height: 120px;
   margin-bottom: 15%;
 }
-
 @media screen and (max-width: 933px) {
   #presentation .prez .card .circle img {
     margin-bottom: 5%;
   }
 }
-
+@media screen and (max-width: 1059px) {
+  #presentation .prez .card .circle img {
+    margin-bottom: 10%;
+    height: 180px;
+  }
+}
+@media screen and (max-width: 1059px) {
+  #presentation .prez .card .circle img {
+    height: 120px;
+  }
+}
 #presentation .prez .card h2 {
   color: #f6a11c;
   text-transform: uppercase;
   margin-bottom: 5%;
 }
-
 #presentation .prez .card strong {
   color: #f6a11c;
+}
+#presentation .prez .card p {
+  font-size: 1.2rem;
+}
+
+#star-wars {
+  padding: 40px 10% 0;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding: 5% 10% 55% 5%;
+  height: 0;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+
+#apropos {
+  background-image: url(/assets/img/fond-home.png) center/cover;
+  padding-bottom: 100px;
+  margin-bottom: 30px;
+}
+#apropos h1 {
+  padding: 150px 22%;
+  text-align: center;
+  color: #18223b;
+  font-family: "Oswald-SemiLight";
+}
+@media screen and (max-width: 816px) {
+  #apropos h1 {
+    padding: 150px 22%;
+    font-size: 3rem;
+    margin-bottom: 60px;
+  }
+}
+#apropos h1 strong {
+  font-family: "Oswald-SemiBold";
 }
 
 #roomsSection #roomsContainer {
   width: 80%;
   max-width: 1000px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   margin: 0 auto;
   padding: 50px 0;
 }
-
 #roomsSection #roomsContainer h2 {
   text-transform: uppercase;
   height: 100px;
@@ -274,23 +330,19 @@ body {
   color: #1e1e1e;
   margin-bottom: 30px;
 }
-
 #roomsSection #roomsContainer .roomCard {
   margin: 15px 0;
   color: whitesmoke;
   width: 100%;
   border-radius: 60px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "txt img";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "txt img";
   position: relative;
-  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
+
 
 @media screen and (max-width: 500px) {
   #roomsSection #roomsContainer .roomCard {
@@ -299,7 +351,8 @@ body {
         grid-template-columns: 1fr;
     -ms-grid-rows: 30% 70%;
         grid-template-rows: 30% 70%;
-        grid-template-areas: "img" "txt";
+        grid-template-areas: "img"
+ "txt";
   }
 }
 
@@ -369,25 +422,14 @@ body {
   }
 }
 
+
 #roomsSection #roomsContainer .roomCard .cardContent {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: txt;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background: #d1d1d1;
-  background: -webkit-gradient(linear, left top, right top, color-stop(65%, #d1d1d1), to(#e4e5e4));
   background: linear-gradient(90deg, #d1d1d1 65%, #e4e5e4 100%);
   color: #1e1e1e;
   border-radius: 15px 0 0 15px;
@@ -410,25 +452,18 @@ body {
 
 #roomsSection #roomsContainer .roomCard .cardContent .cardTitle {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardTitle h3 {
   text-transform: uppercase;
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardTitle span {
   color: #f6a11c;
   font-size: 1.2rem;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .roomSynopsis {
   font-size: 0.8rem;
   text-align: left;
@@ -440,10 +475,10 @@ body {
   }
 }
 
+
 #roomsSection #roomsContainer .roomCard .cardContent .roomSynopsis .hiddenText {
   display: none;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .roomResaButton {
   width: 200px;
   height: 30px;
@@ -453,92 +488,53 @@ body {
   margin: 15px;
   padding-top: 3px;
   text-transform: uppercase;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 0.3s ease;
+  align-items: center;
   transition: 0.3s ease;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .roomResaButton:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .hiddenButton {
   display: none;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardInfos {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 10px;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameTime {
   width: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameTime i {
   padding-top: 4px;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gamePlayers {
   width: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gamePlayers img {
   padding-top: 4px;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameAge {
   width: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameLevel {
   width: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #roomsSection #roomsContainer .roomCard .cardImage {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: img;
 }
+
 
 @media screen and (max-width: 500px) {
   #roomsSection #roomsContainer .roomCard .cardImage {
@@ -547,18 +543,16 @@ body {
   }
 }
 
+
 #roomsSection #roomsContainer .roomCard #roomCard4Img {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/star-wars-death-star-2.jpg") center/cover;
 }
-
 #roomsSection #roomsContainer .roomCard #roomCard1Img {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chateau-ambulant.jpg") center/cover;
 }
-
 #roomsSection #roomsContainer .roomCard #roomCard2Img {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chucky.png") center/cover;
 }
-
 #roomsSection #roomsContainer .roomCard #roomCard3Img {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/souterrainsjpg.jpg") right/cover;
 }
@@ -567,43 +561,29 @@ body {
   background: #18223b;
   color: #e4e5e4;
 }
-
 #resaSection #resaContainer {
   width: 80%;
   margin: 0 auto;
   padding-bottom: 70px;
 }
-
 #resaSection #resaContainer h2 {
   text-transform: uppercase;
   height: 100px;
   padding-top: 60px;
 }
-
 #resaSection #resaContainer #resaInputs {
   height: 330px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-
 #resaSection #resaContainer #resaInputs label {
   color: #f6a11c;
   font-size: 1.2rem;
   margin: 10px 0;
 }
-
 #resaSection #resaContainer #resaInputs select,
 #resaSection #resaContainer #resaInputs input {
   font-size: 1.1rem;
@@ -614,32 +594,19 @@ body {
   border-radius: 20px;
   text-align: center;
 }
-
 #resaSection #resaContainer #resaInputs select option,
 #resaSection #resaContainer #resaInputs input option {
   font-size: 1.2rem;
 }
-
 #resaSection #resaContainer .flexColCenter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext {
   position: relative;
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaAvailabilitiesTitle {
   font-size: 1.3rem;
   color: #f6a11c;
@@ -654,41 +621,27 @@ body {
   }
 }
 
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 {
   width: 50%;
   margin-right: 30px;
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine {
   width: 100%;
   margin: 20px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
   position: relative;
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine:after,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine:after {
   content: "";
@@ -697,6 +650,7 @@ body {
   bottom: -10px;
   width: 93%;
 }
+
 
 @media screen and (max-width: 600px) {
   #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine:after,
@@ -729,7 +683,6 @@ body {
             transform: scale(1.1);
   }
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaAvailable,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaAvailable {
   width: 25%;
@@ -739,16 +692,12 @@ body {
   color: #1e1e1e;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
-          box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
-  -webkit-transition: 0.3s ease;
+  box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.301);
   transition: 0.3s ease;
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaAvailable:hover,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaAvailable:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 800px) {
@@ -764,6 +713,7 @@ body {
     display: none;
   }
 }
+
 
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer1 .resaHourLine .resaUnavailable,
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities .resaHourContainer #resaHoursContainer2 .resaHourLine .resaUnavailable {
@@ -793,11 +743,11 @@ body {
   color: rgba(245, 245, 245, 0.308);
 }
 
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaPreviousNextButtons {
   margin: 40px 0;
   padding-left: 70px;
 }
-
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaAvailabilities #resaPreviousNextButtons button {
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -825,20 +775,14 @@ body {
   width: 150px;
   background: #f6a11c;
   color: #1e1e1e;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border-radius: 15px;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
+
 
 @media screen and (max-width: 300px) {
   #resaSection #resaContainer #resaAvailabilitiesAndNext #resaNextButton {
@@ -846,9 +790,9 @@ body {
   }
 }
 
+
 #resaSection #resaContainer #resaAvailabilitiesAndNext #resaNextButton:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .isSelected {
@@ -886,6 +830,7 @@ body {
   }
 }
 
+
 .modal .modal-content {
   background-color: #18223b;
   margin: auto;
@@ -902,19 +847,14 @@ body {
   }
 }
 
-.modal .modal-content #recapModalContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 15% 70% 15%;
-      grid-template-columns: 15% 70% 15%;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "prev descr res";
-}
 
+.modal .modal-content #recapModalContainer {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "prev descr res";
+}
 .modal .modal-content #recapModalContainer #btnReturnToResa {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: prev;
   height: 40px;
   width: 100%;
@@ -931,16 +871,14 @@ body {
 }
 
 .modal .modal-content #recapModalContainer #recapModalContent {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: descr;
   padding: 20px;
 }
-
 .modal .modal-content #recapModalContainer #recapModalContent h3 {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
+
 
 @media screen and (max-width: 400px) {
   .modal .modal-content #recapModalContainer #recapModalContent h3 {
@@ -948,23 +886,15 @@ body {
   }
 }
 
+
 .modal .modal-content #recapModalContainer #recapModalContent #resaRecapContent {
   height: 100px;
   text-transform: uppercase;
   font-size: 0.9rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
   margin: 20px 0;
 }
 
@@ -987,22 +917,13 @@ body {
   }
 }
 
-.modal .modal-content #recapModalContainer #recapModalContent form .flexColLeft {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-}
 
+.modal .modal-content #recapModalContainer #recapModalContent form .flexColLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
 .modal .modal-content #recapModalContainer #recapModalContent form label {
   color: #f6a11c;
 }
@@ -1019,10 +940,7 @@ body {
   border-radius: 20px;
   padding: 0 10px;
 }
-
 .modal .modal-content #recapModalContainer #btnConfirmResa {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: res;
   height: 40px;
   width: 100%;
@@ -1041,13 +959,13 @@ body {
   }
 }
 
+
 .modal .modal-content .close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
 .modal .modal-content .close:hover, .modal .modal-content .close:focus {
   color: red;
   text-decoration: none;
@@ -1055,74 +973,135 @@ body {
 }
 
 #contact {
+  margin: 0 auto;
+}
+#contact .contact-info {
+  padding: 0 12% 10%;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1300px) {
+  #contact .contact-info {
+    padding-top: 0;
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+}
+#contact .contact-info .info {
+  width: 50%;
+  margin-right: 3%;
+}
+#contact .contact-info .info img {
+  margin-right: 6%;
+  margin-bottom: 3%;
+  margin-top: 5%;
+  max-width: 100%;
   height: auto;
 }
-
-#contact .contact-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: wrap;
-      -ms-flex: wrap;
-          flex: wrap;
-  width: 80%;
-  margin: auto;
-  padding: 3%;
+#contact h2 {
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 10%;
+  font-size: 2rem;
+}
+@media screen and (max-width: 933px) {
+  #contact h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 736px) {
+  #contact h2 {
+    font-size: 1.2rem;
+  }
+}
+#contact h3 {
+  margin-top: 12%;
+  font-size: 1.5rem;
+  font-family: "Oswald Regular";
+  font-weight: 300;
+}
+@media screen and (max-width: 736px) {
+  #contact h3 {
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
+}
+#contact p {
+  line-height: 2;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 736px) {
+  #contact p {
+    font-size: 1.1rem;
+  }
 }
 
 footer {
   background-color: #1e1e1e;
 }
-
 footer .foot-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   color: white;
   padding: 5%;
   line-height: 2;
 }
-
+@media screen and (max-width: 928px) {
+  footer .foot-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 footer .foot-nav .logo .secondary-icon {
-  height: 60px;
+  height: 100px;
 }
-
+@media screen and (max-width: 1150px) {
+  footer .foot-nav .logo .secondary-icon {
+    height: 80px;
+    margin-right: 3rem;
+  }
+}
+@media screen and (max-width: 928px) {
+  footer .foot-nav .logo .secondary-icon {
+    height: 150px;
+    margin-left: 8%;
+    margin-bottom: 5%;
+  }
+}
 footer .foot-nav .ft-c i {
-  margin: 10px;
-  font-size: 30px;
+  margin: 30px 10px;
+  font-size: 40px;
   color: white;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-
 footer .foot-nav .ft-c i:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
-
 footer .foot-nav .ft-c h4 {
   margin-bottom: 15px;
   color: #f6a11c;
 }
-
 footer .mentions {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.3%;
 }
-
-footer .mentions p {
+footer .mentions ul li {
   color: white;
+  display: inline-block;
+  font-size: 14px;
 }
-
-footer .mentions a {
+footer .mentions ul a {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Oswald ExtraLight";
+  padding-right: 10px;
 }
+footer .mentions ul .mentions:last-child {
+  border: 2px solid white;
+}
+
 /*# sourceMappingURL=style.css.map */
