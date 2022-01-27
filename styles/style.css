@@ -162,12 +162,14 @@ body {
 #apropos {
   margin-bottom: 15%;
 }
+
 #apropos .center iframe {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
 }
+
 #apropos h1 {
   padding: 3% 22%;
   text-align: center;
@@ -182,7 +184,6 @@ body {
   }
 }
 
-
 .macaron img {
   height: 30%;
   width: 22%;
@@ -193,45 +194,55 @@ body {
 }
 
 #presentation .prez {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 10%;
   margin: 10% 0;
   line-height: 1.75;
 }
+
 @media screen and (max-width: 933px) {
   #presentation .prez {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 #presentation .prez .card {
   padding: 5%;
   width: 100%;
   text-align: center;
 }
+
 #presentation .prez .card .card + .card {
   margin-left: 3%;
 }
+
 #presentation .prez .card .circle img {
   height: 111px;
   margin-bottom: 15%;
 }
+
 @media screen and (max-width: 933px) {
   #presentation .prez .card .circle img {
     margin-bottom: 5%;
   }
 }
+
 #presentation .prez .card h2 {
   color: #f6a11c;
   text-transform: uppercase;
   margin-bottom: 5%;
 }
+
 #presentation .prez .card strong {
   color: #f6a11c;
-}
-
-#roomsSection {
-  background: #18223b;
 }
 
 #roomsSection #roomsContainer {
@@ -257,30 +268,22 @@ body {
   text-transform: uppercase;
   height: 100px;
   padding-top: 60px;
-  color: #e4e5e4;
+  color: #1e1e1e;
   margin-bottom: 30px;
 }
 
 #roomsSection #roomsContainer .roomCard {
   margin: 15px 0;
-  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.616);
-          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.616);
   color: whitesmoke;
   width: 100%;
-  height: 150px;
   border-radius: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "txt img";
   position: relative;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
@@ -290,25 +293,14 @@ body {
   height: 330px;
 }
 
-#roomsSection #roomsContainer .roomCard .titleAndSynopsis {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 66% 34%;
-      grid-template-columns: 66% 34%;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "title synopsis";
+#roomsSection #roomsContainer .roomCard:hover .hiddenButton {
+  display: block;
 }
 
-#roomsSection #roomsContainer .roomCard .titleAndSynopsis h3 {
+#roomsSection #roomsContainer .roomCard .cardContent {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: title;
-  padding: 0 5px;
-  font-size: 2.2rem;
-  text-align: center;
-  font-weight: 600;
-  height: 100px;
+  grid-area: txt;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,146 +308,162 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-shadow: 3px 3px 5px rgba(187, 187, 187, 0.651);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #d1d1d1;
+  background: -webkit-gradient(linear, left top, right top, color-stop(65%, #d1d1d1), to(#e4e5e4));
+  background: linear-gradient(90deg, #d1d1d1 65%, #e4e5e4 100%);
+  color: #1e1e1e;
+  border-radius: 15px 0 0 15px;
+  padding: 20px;
 }
 
-#roomsSection #roomsContainer .roomCard .titleAndSynopsis .roomSynopsis {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: synopsis;
-  max-height: 5.2rem;
-  text-align: center;
-  overflow: hidden;
-  line-height: 1.3rem;
-  -webkit-box-orient: vertical;
-  display: block;
-  display: -webkit-box;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 4;
-}
-
-@media screen and (max-width: 800px) {
-  #roomsSection #roomsContainer .roomCard .titleAndSynopsis .roomSynopsis {
-    max-height: 3.9rem;
-    text-align: center;
-    overflow: hidden;
-    line-height: 1.3rem;
-    -webkit-box-orient: vertical;
-    display: block;
-    display: -webkit-box;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-  }
-}
-
-#roomsSection #roomsContainer .roomCard h5 {
-  color: #f7b32b;
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 1rem;
-  border-radius: 20px;
-  -webkit-transform: rotate(-30deg);
-          transform: rotate(-30deg);
-}
-
-#roomsSection #roomsContainer .roomCard p {
-  width: 92%;
+#roomsSection #roomsContainer .roomCard .cardContent .cardTitle {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#roomsSection #roomsContainer .roomCard p .roomResaButton {
-  background: #f7b32b;
-  -webkit-box-shadow: 3px 3px 5px rgba(158, 158, 158, 0.651);
-          box-shadow: 3px 3px 5px rgba(158, 158, 158, 0.651);
-  width: 40%;
-  max-width: 300px;
+#roomsSection #roomsContainer .roomCard .cardContent .cardTitle h3 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+#roomsSection #roomsContainer .roomCard .cardContent .cardTitle span {
+  color: #f6a11c;
+  font-size: 1.2rem;
+}
+
+#roomsSection #roomsContainer .roomCard .cardContent .roomSynopsis {
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+#roomsSection #roomsContainer .roomCard .cardContent .roomSynopsis .hiddenText {
+  display: none;
+}
+
+#roomsSection #roomsContainer .roomCard .cardContent .roomResaButton {
+  width: 200px;
   height: 30px;
-  border-radius: 10px;
+  background: #f6a11c;
+  border-radius: 5px;
+  text-align: center;
+  margin: 15px;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  font-size: 1.4rem;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
-#roomsSection #roomsContainer .roomCard p .roomResaButton:hover {
-  color: black;
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+#roomsSection #roomsContainer .roomCard .cardContent .hiddenButton {
+  display: none;
 }
 
-#roomsSection #roomsContainer .roomCard p .roomSeeDetails {
-  width: 40%;
-  font-weight: 300;
-  font-size: 0.8rem;
-  text-align: right;
+#roomsSection #roomsContainer .roomCard .cardContent .cardInfos {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
 }
 
-#roomsSection #roomsContainer .roomCard p .roomSeeDetails::after {
-  content: "";
-  position: absolute;
-  border: none;
-  bottom: 3px;
-  width: 22%;
-  right: 0;
+#roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameTime {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#roomsSection #roomsContainer .roomCard p .roomSeeDetails:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  cursor: pointer;
+#roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameTime i {
+  padding-top: 4px;
 }
 
-#roomsSection #roomsContainer .roomCard p .roomSeeDetails:hover::after {
-  border: 1px solid whitesmoke;
+#roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gamePlayers {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#roomsSection #roomCard1 {
+#roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gamePlayers img {
+  padding-top: 4px;
+}
+
+#roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameAge {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#roomsSection #roomsContainer .roomCard .cardContent .cardInfos .gameLevel {
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#roomsSection #roomsContainer .roomCard .cardImage {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img;
+}
+
+#roomsSection #roomsContainer .roomCard #roomCard4Img {
+  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/star-wars-death-star-2.jpg") center/cover;
+}
+
+#roomsSection #roomsContainer .roomCard #roomCard1Img {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chateau-ambulant.jpg") center/cover;
 }
 
-#roomsSection #roomCard2 {
+#roomsSection #roomsContainer .roomCard #roomCard2Img {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/chucky.png") center/cover;
 }
 
-#roomsSection #roomCard3 {
+#roomsSection #roomsContainer .roomCard #roomCard3Img {
   background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/souterrainsjpg.jpg") right/cover;
-}
-
-#roomsSection #roomCard4 {
-  background: linear-gradient(280deg, black 0%, rgba(0, 0, 0, 0.233) 40%, rgba(0, 0, 0, 0) 100%), url("./../assets/img/star-wars-death-star-2.jpg") center/cover;
 }
 
 #resaSection {
@@ -819,12 +827,15 @@ body {
 }
 
 #contact .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: wrap;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
   width: 80%;
   margin: auto;
   padding: 3%;
-
 }
 
 footer {

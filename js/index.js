@@ -193,3 +193,16 @@ document.querySelectorAll('.roomResaButton').forEach((btn) => {
     resaSection.scrollIntoView({behavior: 'smooth'});
   });
 });
+
+document.querySelectorAll('.roomCard').forEach((card) => {
+  card.addEventListener('mouseover', () => {
+    card.childNodes[1].childNodes[3].childNodes[6].style.display = "block";
+    card.childNodes[1].childNodes[5].style.display = "block";
+  });
+
+  card.addEventListener('mouseout', (e) => {
+    card.childNodes[1].childNodes[3].childNodes[6].style.display = "none";
+    card.childNodes[1].childNodes[5].style.display = "none";
+  });
+
+});
