@@ -9,71 +9,54 @@ let resaData = new Object();
 // changes the resa button opacity when clicked
 resaButtons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    // console.log(e);
     resaButtons.forEach((btn) => {
       btn.style.opacity = "1";
     });
     if (resaButtonClicked == false) {
       btn.style.opacity = "0.5";
       resaButtonClicked = true;
-      // console.log(`resaButtonClicked is now: ${resaButtonClicked}`);
     } else {
       btn.style.opacity = "1";
       resaButtonClicked = false;
-      // console.log(`resaButtonClicked is now: ${resaButtonClicked}`);
     }
-
     // gets DOM object value depending on the browser
     if(navigator.userAgent.match(/firefox|fxios/i)){
       resaHourB = e.explicitOriginalTarget.offsetParent.childNodes[1].childNodes[0].data;
     } else {
       resaHourB = e.path[1].childNodes[1].childNodes[0].data;
     }
-
-    // resaHourB = e.path[1].childNodes[1].childNodes[0].data;
-    // console.log("resaHourB: " + resaHourB);
   });
 });
 
 // gets the hour value of the selected line
 resaHourLines.forEach((line) => {
   line.addEventListener('click', (e) => {
-    // console.log(e);
-
     // gets DOM object value depending on the browser
     if(navigator.userAgent.match(/firefox|fxios/i)){
       resaHourL = e.explicitOriginalTarget.offsetParent.childNodes[1].childNodes[0].data;
     } else {
       resaHourL = e.path[1].childNodes[1].childNodes[0].data;
     }
-
-    // resaHourL = e.path[0].childNodes[0].data;
     if (resaHourL == "Réserver" || resaHourL == "Complet") {
       resaHourL = resaHourB;
     }
-    // console.log("resaHourL: " + resaHourL);
+    e.target.classList.toggle("isSelected");
   });
 });
 
 // get all elements when "Suivant" button is clicked
 resaNextButton.addEventListener('click', () => {
-  // create & feed an object 'resaData' with 4 key-value pairs
+  // creates & feeds an object 'resaData' with 4 key-value pairs
   if (roomSelect.value != "" && playersNumber.value != "" && resaGameDate.value != "" && resaHourL != "") {
     resaData = new Object();
     resaData.room = roomSelect.value;
-    // console.log("resaData.room: " + resaData.room);
     resaData.playersNumber = playersNumber.value;
-    // console.log("resaData.playersNumber: " + resaData.playersNumber);
     resaData.gameDate = resaGameDate.value;
-    // console.log("resaData.gameDate: " + resaData.gameDate);
     resaData.gameHour = resaHourL;
-    // console.log("resaData.gameHour: " + resaData.gameHour);
-    // console.log(resaData);
     displayData(resaData);
   } else {
     alert("Merci de renseigner: la salle, le nombre de joueurs, la date et l'heure de votre partie.");
   }
-
 });
 
 // returns a human readable room name, instead of the keyword of the input value

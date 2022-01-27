@@ -26,14 +26,53 @@
       grid-template-columns: 50% 50%;
       grid-template-rows: 1fr;
       grid-template-areas: "txt img";
-
       position: relative;
       transition: 0.3s ease-out;
+      @media screen and (max-width: 500px) {
+        height: 450px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 70%;
+        grid-template-areas:
+          "img"
+          "txt";
+      }
+      @media screen and (max-width: 420px) {
+        height: 500px;
+      }
       &:hover {
         height: 330px;
+        @media screen and (max-width: 1000px) {
+          height: 400px;
+        }
+        @media screen and (max-width: 800px) {
+          height: 500px;
+        }
+        @media screen and (max-width: 600px) {
+          height: 500px;
+        }
+        @media screen and (max-width: 550px) {
+          height: 630px;
+        }
+        @media screen and (max-width: 500px) {
+          height: 600px;
+          grid-template-rows: 25% 75%;
+        }
+        @media screen and (max-width: 320px) {
+          height: 600px;
+        }
       }
       &:hover .hiddenButton {
         display: block;
+      }
+      &:hover .cardContent {
+        @media screen and (max-width: 500px) {
+          height: 480px;
+          border-radius: 0 0 0 15px;
+        }
+        @media screen and (max-width: 320px) {
+          height: 450px;
+          border-radius: 0 0 0 15px;
+        }
       }
       .cardContent {
         grid-area: txt;
@@ -50,10 +89,19 @@
         color: $color-dark;
         border-radius: 15px 0 0 15px;
         padding: 20px;
+        @media screen and (max-width: 500px) {
+          height: 280px;
+          border-radius: 0 0 15px 15px;
+        }
+        @media screen and (max-width: 420px) {
+          height: 350px;
+          border-radius: 0 0 15px 15px;
+        }
         .cardTitle {
           width: 100%;
           display: flex;
           justify-content: space-between;
+          
           h3 {
             text-transform: uppercase;
             font-size: 1.2rem;
@@ -67,6 +115,9 @@
         .roomSynopsis {
           font-size: 0.8rem;
           text-align: left;
+          @media screen and (max-width: 320px) {
+            font-size: 0.7rem;
+          }
           .hiddenText {
             display: none;
           }
@@ -79,7 +130,7 @@
           text-align: center;
           margin: 15px;
           padding-top: 3px;
-          text-transform: uppercase; 
+          text-transform: uppercase;
           align-items: center;
           transition: 0.3s ease;
           &:hover {
@@ -112,7 +163,7 @@
               padding-top: 4px;
             }
           }
-          .gameAge { 
+          .gameAge {
             width: 70px;
             display: flex;
             justify-content: space-between;
@@ -126,6 +177,10 @@
       }
       .cardImage {
         grid-area: img;
+        @media screen and (max-width: 500px) {
+          height: 150px;
+          border-radius: 0 0 0 0;
+        }
       }
       #roomCard4Img {
         background: linear-gradient(
