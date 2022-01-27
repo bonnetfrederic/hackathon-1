@@ -41,11 +41,14 @@ body {
           box-sizing: border-box;
 }
 
-body {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+body::-moz-selection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+body::selection {
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 body {
@@ -289,12 +292,69 @@ body {
   transition: 0.3s ease-out;
 }
 
+@media screen and (max-width: 500px) {
+  #roomsSection #roomsContainer .roomCard {
+    height: 450px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 30% 70%;
+        grid-template-rows: 30% 70%;
+        grid-template-areas: "img" "txt";
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #roomsSection #roomsContainer .roomCard {
+    height: 500px;
+  }
+}
+
 #roomsSection #roomsContainer .roomCard:hover {
   height: 330px;
 }
 
+@media screen and (max-width: 800px) {
+  #roomsSection #roomsContainer .roomCard:hover {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #roomsSection #roomsContainer .roomCard:hover {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #roomsSection #roomsContainer .roomCard:hover {
+    height: 630px;
+    -ms-grid-rows: 25% 75%;
+        grid-template-rows: 25% 75%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #roomsSection #roomsContainer .roomCard:hover {
+    height: 600px;
+  }
+}
+
 #roomsSection #roomsContainer .roomCard:hover .hiddenButton {
   display: block;
+}
+
+@media screen and (max-width: 500px) {
+  #roomsSection #roomsContainer .roomCard:hover .cardContent {
+    height: 480px;
+    border-radius: 0 0 0 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #roomsSection #roomsContainer .roomCard:hover .cardContent {
+    height: 450px;
+    border-radius: 0 0 0 15px;
+  }
 }
 
 #roomsSection #roomsContainer .roomCard .cardContent {
@@ -322,6 +382,20 @@ body {
   padding: 20px;
 }
 
+@media screen and (max-width: 500px) {
+  #roomsSection #roomsContainer .roomCard .cardContent {
+    height: 280px;
+    border-radius: 0 0 15px 15px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #roomsSection #roomsContainer .roomCard .cardContent {
+    height: 350px;
+    border-radius: 0 0 15px 15px;
+  }
+}
+
 #roomsSection #roomsContainer .roomCard .cardContent .cardTitle {
   width: 100%;
   display: -webkit-box;
@@ -346,6 +420,12 @@ body {
 #roomsSection #roomsContainer .roomCard .cardContent .roomSynopsis {
   font-size: 0.8rem;
   text-align: left;
+}
+
+@media screen and (max-width: 320px) {
+  #roomsSection #roomsContainer .roomCard .cardContent .roomSynopsis {
+    font-size: 0.7rem;
+  }
 }
 
 #roomsSection #roomsContainer .roomCard .cardContent .roomSynopsis .hiddenText {
@@ -446,6 +526,13 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: img;
+}
+
+@media screen and (max-width: 500px) {
+  #roomsSection #roomsContainer .roomCard .cardImage {
+    height: 150px;
+    border-radius: 0 0 0 0;
+  }
 }
 
 #roomsSection #roomsContainer .roomCard #roomCard4Img {
